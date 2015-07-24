@@ -1,0 +1,1 @@
+# JustGiving.XamarinBindings
