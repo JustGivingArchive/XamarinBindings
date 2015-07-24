@@ -5,7 +5,7 @@ We have created 4 Xamarin Bindings for use in JustGiving's newly launched iPhone
 - KissMetrics (reasonably well tested)
 - Zendesk (reasonably well tested)
 - Adjust (reasonably well tested)
-- Optomizely (in testing)
+- Optimizely (in testing)
 
 While these have worked well for our app, they are provided "as-is" and pull requests for any bugs are gratefully received.
 
