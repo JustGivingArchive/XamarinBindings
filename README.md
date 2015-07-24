@@ -1,5 +1,4 @@
 # JustGiving's Xamarin Bindings
-===================
 
 We have created 4 Xamarin Bindings for use in JustGiving's newly launched iPhone app:
 
