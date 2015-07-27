@@ -1,6 +1,6 @@
 # JustGiving's Xamarin Bindings
 
-We have created 4 Xamarin Bindings for use in JustGiving's newly launched iPhone app, and are making them available for others to use:
+We have created 4 Xamarin.iOS Bindings for use in JustGiving's newly launched iPhone app, and are making them available for others to use:
 
 - KissMetrics (reasonably well tested)
 - Zendesk (reasonably well tested)
