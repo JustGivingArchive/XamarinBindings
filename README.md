@@ -7,6 +7,9 @@ We have created 4 Xamarin.iOS Bindings for use in JustGiving's newly launched iP
 - Adjust (reasonably well tested)
 - Optimizely (in testing)
 
+We've also created Xamarin.Android bindings:
+- KissMetrics (partially tested)
+
 While these have worked well for our app, they are provided "as-is" and pull requests for any bugs are gratefully received.
 
 Just add one or more binding projects to your solution, and then add a reference to that binding project from your iOS project.
