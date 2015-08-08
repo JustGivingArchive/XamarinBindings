@@ -6,6 +6,7 @@ We have created 4 Xamarin.iOS Bindings for use in JustGiving's newly launched iP
 - Zendesk (reasonably well tested)
 - Adjust (reasonably well tested)
 - Optimizely (in testing)
+- ExactTarget (in testing)
 
 We've also created Xamarin.Android bindings:
 - KissMetrics (partially tested)
