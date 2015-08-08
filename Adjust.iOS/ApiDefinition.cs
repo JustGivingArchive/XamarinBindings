@@ -3,7 +3,7 @@ using System.Drawing;
 using ObjCRuntime;
 using Foundation;
 
-namespace AdjustSDK
+namespace Adjust.iOS
 {
     [Protocol, Model]
     interface ADJLogger {

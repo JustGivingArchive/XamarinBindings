@@ -1,7 +1,7 @@
 ﻿using System;
 using ObjCRuntime;
 
-namespace ZenDeskSdk
+namespace Zendesk.iOS
 {
     [Native]
     public enum ZDKAccountState : long

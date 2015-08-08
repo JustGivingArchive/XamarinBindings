@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using Foundation;
 
-namespace KissMetrics
+namespace KissMetrics.iOS
 {
     [BaseType (typeof (NSObject))]
     public partial interface KISSmetricsAPI {

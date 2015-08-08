@@ -6,7 +6,7 @@ using Foundation;
 using UIKit;
 using CoreGraphics;
 
-namespace ZenDeskSdk
+namespace Zendesk.iOS
 {
     // @interface ZDKAccount : NSObject
     [BaseType (typeof (NSObject))]

@@ -12,12 +12,12 @@ using Foundation;
 // Information about this assembly is defined by the following attributes.
 // Change them to the values specific to your project.
 
-[assembly: AssemblyTitle("OptimizelyiOSSDK")]
+[assembly: AssemblyTitle("Optimizely.iOS")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("markgibaud")]
+[assembly: AssemblyCopyright("JustGiving")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

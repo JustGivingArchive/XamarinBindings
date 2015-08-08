@@ -1,7 +1,7 @@
 ﻿using System;
 using ObjCRuntime;
 
-namespace OptimizelyiOSSDK
+namespace OptimizelyiOS
 {
     [Native]
     public enum OptimizelyExperimentDataState : ulong

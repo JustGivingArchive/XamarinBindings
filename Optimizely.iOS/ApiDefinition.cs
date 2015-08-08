@@ -2,10 +2,9 @@
 using CoreGraphics;
 using Foundation;
 using ObjCRuntime;
-using OptimizelyiOSSDK;
 using UIKit;
 
-namespace OptimizelyiOSSDK
+namespace OptimizelyiOS
 {
     // @interface OptimizelyCodeBlocksKey : NSObject
     [BaseType (typeof(NSObject))]
