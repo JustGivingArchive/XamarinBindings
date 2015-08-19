@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExactTarget.iOS", "ExactTarget.iOS.csproj", "{AE98DF86-424C-4372-81FF-5F21DEDCD2A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE98DF86-424C-4372-81FF-5F21DEDCD2A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE98DF86-424C-4372-81FF-5F21DEDCD2A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE98DF86-424C-4372-81FF-5F21DEDCD2A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE98DF86-424C-4372-81FF-5F21DEDCD2A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
