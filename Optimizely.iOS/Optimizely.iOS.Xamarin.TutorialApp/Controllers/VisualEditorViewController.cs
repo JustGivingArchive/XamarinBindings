@@ -11,6 +11,8 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
     {
       View.BackgroundColor = Styling.Colors.BackgroundColor;
 
+      View.AddGestureRecognizer(new UITapGestureRecognizer(ViewTap));
+
       var discountLabel = new UILabel
       {
         BackgroundColor = Styling.Colors.Green,
@@ -120,6 +122,11 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
         ForegroundColor = UIColor.White,
         Font = UIFont.FromName("Gotham-Light", 14)
       };
+    }
+
+    void ViewTap()
+    {
+      View.EndEditing(true);
     }
   }
 }

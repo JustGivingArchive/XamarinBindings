@@ -31,6 +31,12 @@ namespace Optimizely.iOS.Xamarin.TutorialApp
       Layer.CornerRadius = 5;
       ClipsToBounds = true;
 
+      textField.ShouldReturn += (x) =>
+      {
+        x.ResignFirstResponder();
+        return true;
+      };
+
       Add(textField);
 
       this.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
