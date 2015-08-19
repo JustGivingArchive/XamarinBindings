@@ -8,7 +8,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
   {
     public WelcomeController()
     {
-      View.BackgroundColor = Styling.Colors.BackgroundColor;
+      View.BackgroundColor = Styling.Colors.WelcomeBackgroundColor;
 
       var welcomeView = new UIView
       {
@@ -39,17 +39,12 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
       };
       textLabel.Font = UIFont.FromName("Gotham-Light", 14);
 
-      var button = new UIButton
+      var button = new CustomButton
       {
-        BackgroundColor = Styling.Colors.ButtonColor,
-        ClipsToBounds = true,        
+        BackgroundColor = Styling.Colors.ButtonGreen,
+        TitleText = "Got it. Let's go!"       
       };
-      button.SetTitle("Got it. Let's go!", UIControlState.Normal);
-      button.SetTitleColor(UIColor.White, UIControlState.Normal);
-      button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
-      button.Layer.CornerRadius = 5;
       button.TouchUpInside += Button_TouchUpInside;
-      button.TitleLabel.Font = UIFont.FromName("Gotham-Medium", 16);
       
       welcomeView.AddSubview(image);
       welcomeView.AddSubview(welcomeLabel);
@@ -92,7 +87,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
       );
     }
 
-    void Button_TouchUpInside (object sender, System.EventArgs e)
+    void Button_TouchUpInside(object sender, System.EventArgs e)
     {
       var vc = new LandingTableViewController();
       NavigationController.PushViewController(vc, true);

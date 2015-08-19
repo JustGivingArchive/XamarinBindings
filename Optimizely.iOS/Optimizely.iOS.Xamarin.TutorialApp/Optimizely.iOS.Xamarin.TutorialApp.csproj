@@ -102,6 +102,8 @@
     <Compile Include="Controllers\VisualEditorViewController.cs" />
     <Compile Include="Controllers\LiveVariablesViewController.cs" />
     <Compile Include="Controllers\CodeBlocksViewController.cs" />
+    <Compile Include="Views\CustomElements\CustomButton.cs" />
+    <Compile Include="Views\CustomElements\CustomTextField.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>

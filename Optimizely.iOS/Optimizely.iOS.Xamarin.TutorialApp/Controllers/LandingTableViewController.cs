@@ -73,7 +73,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
     {
       base.ViewWillAppear(animated);
       NavigationController.NavigationBarHidden = false;
-      NavigationController.NavigationBar.BarTintColor = Styling.Colors.BackgroundColor;
+      NavigationController.NavigationBar.BarTintColor = Styling.Colors.WelcomeBackgroundColor;
       NavigationItem.HidesBackButton = true;
 
       var info = new UIButton(UIButtonType.Custom);
