@@ -55,12 +55,12 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
       NavigationController.PushViewController(vc, true);
     }
 
-    public override void ViewDidAppear(bool animated)
+    public override void ViewWillAppear(bool animated)
     {
-      base.ViewDidAppear(animated);
+      base.ViewWillAppear(animated);
 
       NavigationController.NavigationBarHidden = false;
-      NavigationController.NavigationBar.TintColor = UIColor.White;    
+      NavigationController.NavigationBar.TintColor = UIColor.White;
 
       Title = "Code Blocks";
 
@@ -69,6 +69,17 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
         ForegroundColor = UIColor.White,
         Font = UIFont.FromName("Gotham-Light", 14)
       };
+    }
+
+    public override void ViewDidAppear(bool animated)
+    {
+      base.ViewDidAppear(animated);
+    }
+
+    public override void ViewWillDisappear(bool animated)
+    {
+      base.ViewWillDisappear(animated);
+      Title = "";
     }
   }
 }

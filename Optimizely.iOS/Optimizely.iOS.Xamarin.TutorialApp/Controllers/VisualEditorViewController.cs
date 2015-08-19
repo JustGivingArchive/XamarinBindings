@@ -108,9 +108,9 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
       );
     }
 
-    public override void ViewDidAppear(bool animated)
+    public override void ViewWillAppear(bool animated)
     {
-      base.ViewDidAppear(animated);
+      base.ViewWillAppear(animated);
 
       NavigationController.NavigationBarHidden = false;
       NavigationController.NavigationBar.TintColor = UIColor.White;
@@ -122,6 +122,11 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
         ForegroundColor = UIColor.White,
         Font = UIFont.FromName("Gotham-Light", 14)
       };
+    }
+
+    public override void ViewDidAppear(bool animated)
+    {
+      base.ViewDidAppear(animated);
     }
 
     void ViewTap()
