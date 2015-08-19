@@ -141,8 +141,9 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
         description = new UILabel();
 
         title.TextColor = UIColor.White;
+        title.Font = UIFont.FromName("Gotham-Medium", 20);
         description.TextColor = UIColor.White;
-        description.Font = description.Font.WithSize(12);
+        description.Font = UIFont.FromName("Gotham-Light", 12);
         image.ContentMode = UIViewContentMode.ScaleAspectFit;
 
         BackgroundColor = UIColor.Clear;

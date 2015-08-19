@@ -16,7 +16,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
         Text = "Optimizely's iOS SDK enables you to makeyour iOS app more angaging",
         Lines = 0
       };
-      //text1.Font = UIFont.FromName("Gotham-Light", 16);
+      text1.Font = UIFont.FromName("Gotham-Light", 16);
 
       var text2 = new UILabel
       {
@@ -24,7 +24,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
         Text = "This sample app will take you through implementing and utilizing the core functionality of Optimizely. Feel free to take a look at the code for reference.",
         Lines = 0
       };
-      //text2.Font = UIFont.FromName("Gotham-Light", 16);
+      text2.Font = UIFont.FromName("Gotham-Light", 16);
 
       var text3 = new UILabel
       {
@@ -32,7 +32,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
         Text = "Please open your browser to developers.optimizely.com/ios to get started.",
         Lines = 0
       };
-      //text3.Font = UIFont.FromName("Gotham-Light", 16);
+      text3.Font = UIFont.FromName("Gotham-Light", 16);
 
       View.AddSubview(text1);
       View.AddSubview(text2);

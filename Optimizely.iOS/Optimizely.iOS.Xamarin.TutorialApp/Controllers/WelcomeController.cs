@@ -29,6 +29,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
         Lines = 2,
         TextAlignment = UITextAlignment.Center,
       };
+      welcomeLabel.Font = UIFont.FromName("Gotham-Light", 18);
 
       var textLabel = new UILabel
       {
@@ -36,7 +37,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
         Lines = 2,
         TextAlignment = UITextAlignment.Center,
       };
-      textLabel.Font = textLabel.Font.WithSize(14);
+      textLabel.Font = UIFont.FromName("Gotham-Light", 14);
 
       var button = new UIButton
       {
@@ -48,6 +49,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
       button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
       button.Layer.CornerRadius = 5;
       button.TouchUpInside += Button_TouchUpInside;
+      button.TitleLabel.Font = UIFont.FromName("Gotham-Medium", 16);
       
       welcomeView.AddSubview(image);
       welcomeView.AddSubview(welcomeLabel);

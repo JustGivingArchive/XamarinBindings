@@ -34,11 +34,11 @@
 	<string>Resources/Images.xcassets/AppIcons.appiconset</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Gotham-Bold.otf</string>
-		<string>Gotham-BoldItalic.otf</string>
-		<string>Gotham-Light.otf</string>
-		<string>Gotham-Medium.otf</string>
-		<string>Gotham-MediumItalic.otf</string>
+		<string>Fonts/Gotham-Bold.otf</string>
+		<string>Fonts/Gotham-BoldItalic.otf</string>
+		<string>Fonts/Gotham-Light.otf</string>
+		<string>Fonts/Gotham-Medium.otf</string>
+		<string>Fonts/Gotham-MediumItalic.otf</string>
 	</array>
 </dict>
 </plist>
