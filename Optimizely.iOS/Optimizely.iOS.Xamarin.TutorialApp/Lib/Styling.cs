@@ -25,6 +25,8 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Lib
       public static readonly UIColor ButtonGreen = Green;
       public static readonly UIColor BackgroundColor = BlueLight;
       public static readonly UIColor TextBlue = Blue;
+      public static readonly UIColor TextLightBlue = BlueLight;
+      public static readonly UIColor TextGray = Gray;
       public static readonly UIColor ButtonBlue = Blue;
       public static readonly UIColor BorderColor = Gray;
     }
