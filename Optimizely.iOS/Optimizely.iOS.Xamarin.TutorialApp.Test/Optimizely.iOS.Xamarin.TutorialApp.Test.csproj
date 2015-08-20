@@ -78,6 +78,8 @@
     <Compile Include="Main.cs" />
     <Compile Include="UnitTestAppDelegate.cs" />
     <Compile Include="OptimizelyVariableKeyTests.cs" />
+    <Compile Include="OptimizelyTests.cs" />
+    <Compile Include="OptimizelyCodeBlocksKeyTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>

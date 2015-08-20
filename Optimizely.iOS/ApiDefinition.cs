@@ -27,7 +27,7 @@ namespace OptimizelyiOS
     [Static]
     [Export("optimizelyCodeBlocksKey:blockNames:")]
     //[Verify(StronglyTypedNSArray)]
-    OptimizelyCodeBlocksKey OptimizelyCodeBlocksKeyS(string key, NSObject[] blockNames);
+    OptimizelyCodeBlocksKey GetOptimizelyCodeBlocksKey(string key, NSObject[] blockNames);
   }
 
   // @interface OptimizelyExperimentData : NSObject
