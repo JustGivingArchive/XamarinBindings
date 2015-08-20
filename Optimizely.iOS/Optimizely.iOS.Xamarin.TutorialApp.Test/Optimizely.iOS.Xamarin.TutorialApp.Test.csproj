@@ -77,7 +77,13 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="UnitTestAppDelegate.cs" />
-    <Compile Include="Tests.cs" />
+    <Compile Include="OptimizelyVariableKeyTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Optimizely.iOS.csproj">
+      <Project>{D64BCAD7-15DB-439B-B63D-C901E3C01FE6}</Project>
+      <Name>Optimizely.iOS</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
