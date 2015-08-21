@@ -41,7 +41,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {
-        OptimizelyiOS.Optimizely.StartOptimizelyWithAPIToken("string apiToken", new NSDictionary(), null);
+        OptimizelyiOS.Optimizely.StartOptimizelyWithAPIToken("string apiToken", new NSDictionary(), successBlock);
       }
       catch(Exception e)
       {
@@ -433,7 +433,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {
-        OptimizelyiOS.Optimizely.SharedInstance().CodeTest("codeTestKey", new NSDictionary(), null);
+        OptimizelyiOS.Optimizely.SharedInstance().CodeTest("codeTestKey", new NSDictionary(), action);
       }
       catch(Exception e)
       {
@@ -441,5 +441,9 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
       }
       Assert.Pass();
     }
+
+    OptimizelySuccessBlock successBlock = delegate { };
+
+    Action action = delegate { };
   }
 }

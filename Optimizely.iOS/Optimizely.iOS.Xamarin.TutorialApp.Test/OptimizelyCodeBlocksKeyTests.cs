@@ -9,7 +9,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
   public class OptimizelyCodeBlocksKeyTests
   {
     [Test]
-    public void OptimizelyCodeBlocksKeyS()
+    public void GetOptimizelyCodeBlocksKey()
     {
       try
       {
