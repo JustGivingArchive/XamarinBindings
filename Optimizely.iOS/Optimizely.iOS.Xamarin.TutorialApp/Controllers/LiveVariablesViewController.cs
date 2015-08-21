@@ -1,6 +1,7 @@
 ﻿using UIKit;
 using Optimizely.iOS.Xamarin.TutorialApp.Lib;
 using Cirrious.FluentLayouts.Touch;
+using Optimizely.iOS.Xamarin.TutorialApp.Views;
 
 namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
 {

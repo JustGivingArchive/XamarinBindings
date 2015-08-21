@@ -3,7 +3,7 @@ using Cirrious.FluentLayouts.Touch;
 using Foundation;
 using Optimizely.iOS.Xamarin.TutorialApp.Lib;
 
-namespace Optimizely.iOS.Xamarin.TutorialApp
+namespace Optimizely.iOS.Xamarin.TutorialApp.Views
 {
   public class LiveVariableView : UIView
   {
@@ -50,14 +50,14 @@ namespace Optimizely.iOS.Xamarin.TutorialApp
       this.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
 
       this.AddConstraints(
-        this.oldPrice.WithSameBottom(this).Minus(30),
+        this.oldPrice.WithSameBottom(this).Minus(20),
         this.oldPrice.WithSameCenterX(this).Minus(20),
 
         this.newPrice.WithSameCenterY(this.oldPrice),
         this.newPrice.ToRightOf(this.oldPrice).Plus(10),
 
         this.title.WithSameCenterX(this),
-        this.title.Above(this.oldPrice).Minus(20),
+        this.title.Above(this.oldPrice).Minus(15),
 
         this.image.WithSameCenterX(this),
         this.image.WithSameTop(this).Plus(20),

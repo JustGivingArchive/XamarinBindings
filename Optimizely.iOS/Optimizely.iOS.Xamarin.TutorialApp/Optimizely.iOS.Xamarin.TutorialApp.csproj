@@ -104,7 +104,7 @@
     <Compile Include="Controllers\CodeBlocksViewController.cs" />
     <Compile Include="Views\CustomElements\CustomButton.cs" />
     <Compile Include="Views\CustomElements\CustomTextField.cs" />
-    <Compile Include="Views\CustomElements\LiveVariableView.cs" />
+    <Compile Include="Views\LiveVariableView.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>

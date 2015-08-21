@@ -2,6 +2,7 @@
 using UIKit;
 using Optimizely.iOS.Xamarin.TutorialApp.Lib;
 using Cirrious.FluentLayouts.Touch;
+using Optimizely.iOS.Xamarin.TutorialApp.Views.CustomElements;
 
 namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
 {
@@ -74,36 +75,36 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
         discountLabel.WithSameRight(View),
         discountLabel.Height().EqualTo(30),
 
-        image.WithSameCenterX(View),
-        image.WithSameTop(discountLabel).Plus(100),
+        phoneLabel.WithSameLeft(phoneField),
+        phoneLabel.WithSameCenterY(View),
 
-        emailField.WithSameCenterX(View),
-        emailField.Height().EqualTo(30),
-        emailField.Width().EqualTo(200),
-        emailField.Below(image).Plus(40),
-
-        emailLabel.WithSameLeft(emailField),
-        emailLabel.Above(emailField).Minus(5),
-
-        phoneLabel.WithSameLeft(emailField),
-        phoneLabel.Below(emailField).Plus(20),
-
-        phoneField.WithSameLeft(emailField),
-        phoneField.WithSameWidth(emailField),
-        phoneField.WithSameHeight(emailField),
+        phoneField.WithSameCenterX(View),
+        phoneField.Height().EqualTo(30),
+        phoneField.Width().EqualTo(200),
         phoneField.Below(phoneLabel).Plus(5),
 
-        passwordLabel.WithSameLeft(emailField),
-        passwordLabel.Below(phoneField).Plus(20),
+        emailField.WithSameLeft(phoneField),
+        emailField.WithSameWidth(phoneField),
+        emailField.WithSameHeight(phoneField),
+        emailField.Above(phoneLabel).Minus(15),
 
-        passwordField.WithSameLeft(emailField),
-        passwordField.WithSameWidth(emailField),
-        passwordField.WithSameHeight(emailField),
+        emailLabel.WithSameLeft(phoneField),
+        emailLabel.Above(emailField).Minus(5),
+
+        image.WithSameCenterX(View),
+        image.Above(emailLabel).Minus(15),
+
+        passwordLabel.WithSameLeft(phoneField),
+        passwordLabel.Below(phoneField).Plus(15),
+
+        passwordField.WithSameLeft(phoneField),
+        passwordField.WithSameWidth(phoneField),
+        passwordField.WithSameHeight(phoneField),
         passwordField.Below(passwordLabel).Plus(5),
 
-        button.Below(passwordField).Plus(30),
+        button.Below(passwordField).Plus(20),
         button.WithSameCenterX(View),
-        button.WithSameWidth(emailField),
+        button.WithSameWidth(phoneField),
         button.Height().EqualTo(50)
       );
     }

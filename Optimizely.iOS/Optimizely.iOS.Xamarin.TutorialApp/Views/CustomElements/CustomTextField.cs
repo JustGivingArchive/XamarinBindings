@@ -2,7 +2,7 @@
 using Optimizely.iOS.Xamarin.TutorialApp.Lib;
 using Cirrious.FluentLayouts.Touch;
 
-namespace Optimizely.iOS.Xamarin.TutorialApp
+namespace Optimizely.iOS.Xamarin.TutorialApp.Views.CustomElements
 {
   public class CustomTextField : UIView
   {

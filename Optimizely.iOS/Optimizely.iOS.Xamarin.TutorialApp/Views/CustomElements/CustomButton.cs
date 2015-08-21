@@ -1,7 +1,7 @@
 ﻿using UIKit;
 using Optimizely.iOS.Xamarin.TutorialApp.Lib;
 
-namespace Optimizely.iOS.Xamarin.TutorialApp
+namespace Optimizely.iOS.Xamarin.TutorialApp.Views.CustomElements
 {
   public class CustomButton : UIButton
   {
