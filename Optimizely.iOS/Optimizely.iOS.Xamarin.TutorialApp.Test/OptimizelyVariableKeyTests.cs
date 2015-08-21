@@ -110,8 +110,10 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     public void IsEqualToOptimizelyVariableKey()
     {
       try
-      {
-        new OptimizelyVariableKey().IsEqualToOptimizelyVariableKey(new OptimizelyVariableKey());
+      {        
+        var key = OptimizelyVariableKey.OptimizelyKeyWithKey("key", "defaultVaue");
+
+        key.IsEqualToOptimizelyVariableKey(key);
       }
       catch (Exception e)
       {

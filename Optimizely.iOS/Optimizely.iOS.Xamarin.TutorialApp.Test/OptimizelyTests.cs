@@ -8,6 +8,8 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
   [TestFixture]
   public class OptimizelyTests
   {
+    OptimizelyVariableKey key = OptimizelyVariableKey.OptimizelyKeyWithKey("key", "defaultVaue");
+
     [Test]
     public void SharedInstance()
     {
@@ -15,7 +17,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
       {
         OptimizelyiOS.Optimizely.SharedInstance();
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -29,7 +31,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
       {
         OptimizelyiOS.Optimizely.StartOptimizelyWithAPIToken("string apiToken", new NSDictionary());
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -43,7 +45,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
       {
         OptimizelyiOS.Optimizely.StartOptimizelyWithAPIToken("string apiToken", new NSDictionary(), successBlock);
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -57,7 +59,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
       {
         OptimizelyiOS.Optimizely.SetValue("value", "value");
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -71,7 +73,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
       {
         OptimizelyiOS.Optimizely.HandleOpenURL(new NSUrl(""));
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -85,7 +87,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
       {
         OptimizelyiOS.Optimizely.EnableEditor();
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -99,7 +101,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
       {
         OptimizelyiOS.Optimizely.DisableSwizzle();
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -113,7 +115,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
       {
         OptimizelyiOS.Optimizely.EnableGestureInAppStoreApp();
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -127,7 +129,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
       {
         OptimizelyiOS.Optimizely.Dispatch();
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -141,7 +143,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
       {
         OptimizelyiOS.Optimizely.DispatchEvents();
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -155,7 +157,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
       {
         OptimizelyiOS.Optimizely.FetchNewDataFile();
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -169,7 +171,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
       {
         OptimizelyiOS.Optimizely.TrackEvent("event");
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -183,7 +185,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
       {
         OptimizelyiOS.Optimizely.TrackRevenue(1);
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -195,9 +197,9 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {
-        OptimizelyiOS.Optimizely.RegisterCallbackForVariableWithKey(new OptimizelyVariableKey(), null);
+        OptimizelyiOS.Optimizely.RegisterCallbackForVariableWithKey(key, callback);
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -211,7 +213,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
       {
         OptimizelyiOS.Optimizely.RefreshExperiments();
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -222,10 +224,10 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     public void StringForKey()
     {
       try
-      {
-        OptimizelyiOS.Optimizely.StringForKey(new OptimizelyVariableKey());
+      {        
+        OptimizelyiOS.Optimizely.StringForKey(key);
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -237,9 +239,9 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {
-        OptimizelyiOS.Optimizely.ColorForKey(new OptimizelyVariableKey());
+        OptimizelyiOS.Optimizely.ColorForKey(key);
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -251,9 +253,9 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {
-        OptimizelyiOS.Optimizely.NumberForKey(new OptimizelyVariableKey());
+        OptimizelyiOS.Optimizely.NumberForKey(key);
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -265,9 +267,9 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {
-        OptimizelyiOS.Optimizely.PointForKey(new OptimizelyVariableKey());
+        OptimizelyiOS.Optimizely.PointForKey(key);
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -279,9 +281,9 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {
-        OptimizelyiOS.Optimizely.SizeForKey(new OptimizelyVariableKey());
+        OptimizelyiOS.Optimizely.SizeForKey(key);
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -293,9 +295,9 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {
-        OptimizelyiOS.Optimizely.RectForKey(new OptimizelyVariableKey());
+        OptimizelyiOS.Optimizely.RectForKey(key);
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -307,9 +309,9 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {
-        OptimizelyiOS.Optimizely.BoolForKey(new OptimizelyVariableKey());
+        OptimizelyiOS.Optimizely.BoolForKey(key);
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -321,9 +323,9 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {
-        OptimizelyiOS.Optimizely.CodeBlocksWithKey(new OptimizelyCodeBlocksKey(), null, null);
+        OptimizelyiOS.Optimizely.CodeBlocksWithKey(null, null, null);
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -335,9 +337,9 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {
-        OptimizelyiOS.Optimizely.CodeBlocksWithKey(new OptimizelyCodeBlocksKey(), null, null, null);
+        OptimizelyiOS.Optimizely.CodeBlocksWithKey(null, null, null, null);
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -349,9 +351,9 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {
-        OptimizelyiOS.Optimizely.CodeBlocksWithKey(new OptimizelyCodeBlocksKey(), null, null, null, null);
+        OptimizelyiOS.Optimizely.CodeBlocksWithKey(null, null, null, null, null);
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -363,9 +365,9 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {
-        OptimizelyiOS.Optimizely.CodeBlocksWithKey(new OptimizelyCodeBlocksKey(), null, null, null, null, null);
+        OptimizelyiOS.Optimizely.CodeBlocksWithKey(null, null, null, null, null, null);
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -377,9 +379,9 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {
-        OptimizelyiOS.Optimizely.PreregisterVariableKey(new OptimizelyVariableKey());
+        OptimizelyiOS.Optimizely.PreregisterVariableKey(key);
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -391,9 +393,9 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {
-        OptimizelyiOS.Optimizely.PreregisterBlockKey(new OptimizelyCodeBlocksKey());
+        OptimizelyiOS.Optimizely.PreregisterBlockKey(null);
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -407,7 +409,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
       {
         OptimizelyiOS.Optimizely.IgnoreUIViewSubclassesWithNames(new NSSet());
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -421,7 +423,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
       {
         OptimizelyiOS.Optimizely.ActivateMixpanelIntegration();
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
@@ -435,15 +437,23 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
       {
         OptimizelyiOS.Optimizely.SharedInstance().CodeTest("codeTestKey", new NSDictionary(), action);
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }
       Assert.Pass();
     }
 
-    OptimizelySuccessBlock successBlock = delegate { };
+    OptimizelySuccessBlock successBlock = delegate
+    {        
+    };
 
-    Action action = delegate { };
+    Action action = delegate
+    {
+    };
+
+    Action<NSString, NSObject> callback = delegate
+    {
+    };
   }
 }
