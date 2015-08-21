@@ -69,7 +69,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp
       // Initialize Google Analytics prior to startOptimizely e.g.
       // id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:@"YOUR_GA_TRACKING_ID"];
       var options = launchOptions ?? new NSDictionary();
-      OptimizelyiOS.Optimizely.StartOptimizelyWithAPIToken(@"AAMseu0A6cJKXYL7RiH_TgxkvTRMOCvS~123456", options);
+      //OptimizelyiOS.Optimizely.StartOptimizelyWithAPIToken(@"AAMseu0A6cJKXYL7RiH_TgxkvTRMOCvS~123456", options);
 
       // [OPTIMIZELY] (OPTIONAL) Mixpanel Integration Instructions and order
       // Optimizely Mixpanel Integration goes here
