@@ -8,7 +8,8 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
   [TestFixture]
   public class OptimizelyTests
   {
-    OptimizelyVariableKey key = OptimizelyVariableKey.OptimizelyKeyWithKey("key", "defaultVaue");
+    OptimizelyVariableKey variableKey = OptimizelyVariableKey.OptimizelyKeyWithKey("key", "defaultVaue");
+    OptimizelyCodeBlocksKey blocksKey = OptimizelyCodeBlocksKey.GetOptimizelyCodeBlocksKey("key", new NSObject[] { });
 
     [Test]
     public void SharedInstance()
@@ -197,7 +198,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {
-        OptimizelyiOS.Optimizely.RegisterCallbackForVariableWithKey(key, callback);
+        OptimizelyiOS.Optimizely.RegisterCallbackForVariableWithKey(variableKey, callback);
       }
       catch (Exception e)
       {
@@ -225,7 +226,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {        
-        OptimizelyiOS.Optimizely.StringForKey(key);
+        OptimizelyiOS.Optimizely.StringForKey(variableKey);
       }
       catch (Exception e)
       {
@@ -239,7 +240,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {
-        OptimizelyiOS.Optimizely.ColorForKey(key);
+        OptimizelyiOS.Optimizely.ColorForKey(variableKey);
       }
       catch (Exception e)
       {
@@ -253,7 +254,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {
-        OptimizelyiOS.Optimizely.NumberForKey(key);
+        OptimizelyiOS.Optimizely.NumberForKey(variableKey);
       }
       catch (Exception e)
       {
@@ -267,7 +268,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {
-        OptimizelyiOS.Optimizely.PointForKey(key);
+        OptimizelyiOS.Optimizely.PointForKey(variableKey);
       }
       catch (Exception e)
       {
@@ -281,7 +282,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {
-        OptimizelyiOS.Optimizely.SizeForKey(key);
+        OptimizelyiOS.Optimizely.SizeForKey(variableKey);
       }
       catch (Exception e)
       {
@@ -295,7 +296,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {
-        OptimizelyiOS.Optimizely.RectForKey(key);
+        OptimizelyiOS.Optimizely.RectForKey(variableKey);
       }
       catch (Exception e)
       {
@@ -309,7 +310,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {
-        OptimizelyiOS.Optimizely.BoolForKey(key);
+        OptimizelyiOS.Optimizely.BoolForKey(variableKey);
       }
       catch (Exception e)
       {
@@ -323,7 +324,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {
-        OptimizelyiOS.Optimizely.CodeBlocksWithKey(null, null, null);
+        OptimizelyiOS.Optimizely.CodeBlocksWithKey(blocksKey, action, action);
       }
       catch (Exception e)
       {
@@ -337,7 +338,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {
-        OptimizelyiOS.Optimizely.CodeBlocksWithKey(null, null, null, null);
+        OptimizelyiOS.Optimizely.CodeBlocksWithKey(blocksKey, action, action, action);
       }
       catch (Exception e)
       {
@@ -351,7 +352,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {
-        OptimizelyiOS.Optimizely.CodeBlocksWithKey(null, null, null, null, null);
+        OptimizelyiOS.Optimizely.CodeBlocksWithKey(blocksKey, action, action, action, action);
       }
       catch (Exception e)
       {
@@ -365,7 +366,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {
-        OptimizelyiOS.Optimizely.CodeBlocksWithKey(null, null, null, null, null, null);
+        OptimizelyiOS.Optimizely.CodeBlocksWithKey(blocksKey, action, action, action, action, action);
       }
       catch (Exception e)
       {
@@ -379,7 +380,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     {
       try
       {
-        OptimizelyiOS.Optimizely.PreregisterVariableKey(key);
+        OptimizelyiOS.Optimizely.PreregisterVariableKey(variableKey);
       }
       catch (Exception e)
       {
@@ -392,8 +393,8 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Test
     public void PreregisterBlockKey()
     {
       try
-      {
-        OptimizelyiOS.Optimizely.PreregisterBlockKey(null);
+      {        
+        OptimizelyiOS.Optimizely.PreregisterBlockKey(blocksKey);
       }
       catch (Exception e)
       {
