@@ -3,13 +3,21 @@ using UIKit;
 using Optimizely.iOS.Xamarin.TutorialApp.Lib;
 using Cirrious.FluentLayouts.Touch;
 using Optimizely.iOS.Xamarin.TutorialApp.Views.CustomElements;
+using OptimizelyiOS;
+using Foundation;
 
 namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
 {
   public class CodeBlocksViewController : UIViewController
   {
+    OptimizelyCodeBlocksKey OnboardingFunnel;
+
     public CodeBlocksViewController()
     {
+      // [OPTIMIZELY] Example how to declare a code block
+      OnboardingFunnel = OptimizelyCodeBlocksKey.GetOptimizelyCodeBlocksKey("OnboardingFunnel", new NSObject[] { new NSString("Add Onboarding Stage") });
+      OptimizelyiOS.Optimizely.PreregisterBlockKey(OnboardingFunnel);
+
       View.BackgroundColor = Styling.Colors.BackgroundColor;
 
       var image = new UIImageView
@@ -52,8 +60,19 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
 
     void Button_TouchUpInside(object sender, EventArgs e)
     {
-      var vc = new VisualEditorViewController();
-      NavigationController.PushViewController(vc, true);
+      // [OPTIMIZELY] Examples of how to implement code blocks (different flow)
+      OptimizelyiOS.Optimizely.CodeBlocksWithKey(OnboardingFunnel,
+        () =>
+        {
+          var vc = new CodeBlocksOnboardViewController();
+          NavigationController.PushViewController(vc, true);
+        },
+        () =>
+        {
+          var vc = new VisualEditorViewController();
+          NavigationController.PushViewController(vc, true);
+        }
+      );
     }
 
     public override void ViewWillAppear(bool animated)
