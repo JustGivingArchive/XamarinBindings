@@ -3,6 +3,7 @@ using UIKit;
 using Optimizely.iOS.Xamarin.TutorialApp.Lib;
 using Cirrious.FluentLayouts.Touch;
 using Optimizely.iOS.Xamarin.TutorialApp.Views.CustomElements;
+using Foundation;
 
 namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
 {
@@ -123,6 +124,17 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
         ForegroundColor = UIColor.White,
         Font = UIFont.FromName("Gotham-Light", 14)
       };
+
+      NSNotificationCenter.DefaultCenter.AddObserver(UIKeyboard.WillShowNotification, KeyboardWillShow);
+      NSNotificationCenter.DefaultCenter.AddObserver(UIKeyboard.WillHideNotification, KeyboardWillHide);
+    }
+
+    public override void ViewWillDisappear(bool animated)
+    {
+      base.ViewWillDisappear(animated);
+
+      NSNotificationCenter.DefaultCenter.RemoveObserver(this, UIKeyboard.WillHideNotification, null);
+      NSNotificationCenter.DefaultCenter.RemoveObserver(this, UIKeyboard.WillShowNotification, null);
     }
 
     public override void ViewDidAppear(bool animated)
@@ -134,5 +146,33 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
     {
       View.EndEditing(true);
     }
+
+    void KeyboardWillShow(NSNotification notification)
+    {
+      UIView.AnimateAsync(0.3, () => {
+        var f = this.View.Frame;
+        f.Y = -150.0f;
+        this.View.Frame = f;
+      });
+    }
+
+    void KeyboardWillHide(NSNotification notification)
+    {
+      UIView.AnimateAsync(0.3, () => {
+        var f = this.View.Frame;
+        f.Y = 0.0f;
+        this.View.Frame = f;
+      });
+    }
+
+//    - (IBAction)emailActive:(id)sender {
+//      [self.optlyEmailField canBecomeFirstResponder];
+//    }
+//    - (IBAction)phoneActive:(id)sender {
+//      [self.optlyPhoneField canBecomeFirstResponder];
+//    }
+//    - (IBAction)passActive:(id)sender {
+//      [self.optlyPassField canBecomeFirstResponder];
+//    }
   }
 }
