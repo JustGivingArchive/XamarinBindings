@@ -5,7 +5,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>Optimizely.iOS.Xamarin.TutorialApp</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.scorebig.optimizely.ios.xamarin.tutorialapp</string>
+	<string>Optimizely.$(PRODUCT_NAME:rfc1034identifier)</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
@@ -39,6 +39,19 @@
 		<string>Fonts/Gotham-Light.otf</string>
 		<string>Fonts/Gotham-Medium.otf</string>
 		<string>Fonts/Gotham-MediumItalic.otf</string>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.optimizely</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>optly3391160510</string>
+			</array>
+			<key>CFBundleURLTypes</key>
+			<string>Editor</string>
+		</dict>
 	</array>
 </dict>
 </plist>
