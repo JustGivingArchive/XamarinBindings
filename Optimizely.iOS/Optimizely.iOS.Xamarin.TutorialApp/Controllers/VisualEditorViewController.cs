@@ -164,15 +164,5 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
         this.View.Frame = f;
       });
     }
-
-//    - (IBAction)emailActive:(id)sender {
-//      [self.optlyEmailField canBecomeFirstResponder];
-//    }
-//    - (IBAction)phoneActive:(id)sender {
-//      [self.optlyPhoneField canBecomeFirstResponder];
-//    }
-//    - (IBAction)passActive:(id)sender {
-//      [self.optlyPassField canBecomeFirstResponder];
-//    }
   }
 }

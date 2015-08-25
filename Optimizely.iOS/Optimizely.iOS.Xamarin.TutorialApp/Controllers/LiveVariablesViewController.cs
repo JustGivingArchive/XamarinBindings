@@ -2,31 +2,63 @@
 using Optimizely.iOS.Xamarin.TutorialApp.Lib;
 using Cirrious.FluentLayouts.Touch;
 using Optimizely.iOS.Xamarin.TutorialApp.Views;
+using OptimizelyiOS;
+using Foundation;
+using System;
+using System.Collections.Generic;
 
 namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
 {
   public class LiveVariablesViewController : UIViewController
   {
+    OptimizelyVariableKey liveVariableNumberofItems;
+    OptimizelyVariableKey liveVariableDiscount;
+    OptimizelyVariableKey liveVariableBool;
+
+    readonly List<LiveVariableView> storeItems;
+
+    readonly UILabel discountLabel;
+
     public LiveVariablesViewController()
     {
+      // [OPTIMIZELY] Examples of how to declare live variables (Part 1 of 2)
+      liveVariableNumberofItems = OptimizelyVariableKey.OptimizelyKeyWithKey("liveVariableNumberofItems", 4);
+      OptimizelyiOS.Optimizely.PreregisterVariableKey(liveVariableNumberofItems);
+      liveVariableDiscount = OptimizelyVariableKey.OptimizelyKeyWithKey("liveVariableDiscount", 0.10);
+      OptimizelyiOS.Optimizely.PreregisterVariableKey(liveVariableDiscount);
+      liveVariableBool = OptimizelyVariableKey.OptimizelyKeyWithKey("liveVariableBool", false);
+      OptimizelyiOS.Optimizely.PreregisterVariableKey(liveVariableBool);
+
+      // create list of objects
+      storeItems = new List<LiveVariableView>();
+
       View.BackgroundColor = Styling.Colors.BackgroundColor;
 
       var centerX = new UIView();
       var centerY = new UIView();
 
-      var discountLabel = new UILabel
+      // [OPTIMIZELY] Examples of how to use live variable values (Part 2 of 2)
+      double discount = (double)OptimizelyiOS.Optimizely.NumberForKey(liveVariableDiscount);
+
+      discountLabel = new UILabel
       {
         BackgroundColor = Styling.Colors.Green,
-        Text = "10% OFF FROM NOW UNTIL 9/15",
+        Text = string.Format("TAKE {0}% OFF FROM NOW UNTIL 9/15", discount * 100),
         Font = UIFont.FromName("Gotham-Medium", 11),
         TextColor = UIColor.White,
         TextAlignment = UITextAlignment.Center
       };
 
-      var view1 = new LiveVariableView("Images/Gear1", "Standard Widget", "3.99", "3.59");
-      var view2 = new LiveVariableView("Images/Gear2", "Standard Widget Pack", "6.99", "6.29");
-      var view3 = new LiveVariableView("Images/Gear3", "Deluxe Widget", "9.99", "8.99");
-      var view4 = new LiveVariableView("Images/Gear4", "Deluxe Widget Pack", "12.99", "11.69");
+      OptimizelyiOS.Optimizely.RegisterCallbackForVariableWithKey(liveVariableDiscount, OnDiscountChanged);
+
+      var view1 = new LiveVariableView("Images/Gear1", "Standard Widget", 3.99, discount);
+      var view2 = new LiveVariableView("Images/Gear2", "Standard Widget Pack", 6.99, discount);
+      var view3 = new LiveVariableView("Images/Gear3", "Deluxe Widget", 9.99, discount);
+      var view4 = new LiveVariableView("Images/Gear4", "Deluxe Widget Pack", 12.99, discount);
+      var view5 = new LiveVariableView("Images/Gear5", "Premium Widget", 15.99, discount);
+      var view6 = new LiveVariableView("Images/Gear6", "Premium Widget Pack", 18.99, discount);
+
+      storeItems.AddRange(new [] { view1, view2, view3, view4, view5, view6 });
 
       View.AddSubviews(centerX, centerY, discountLabel, view1, view2, view3, view4);
       View.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
@@ -70,16 +102,23 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
 
       Title = "Live Variables";
 
-      this.NavigationController.NavigationBar.TitleTextAttributes = new UIStringAttributes()
+      this.NavigationController.NavigationBar.TitleTextAttributes = new UIStringAttributes
       {
         ForegroundColor = UIColor.White,
         Font = UIFont.FromName("Gotham-Light", 14)
       };
     }
 
-    public override void ViewDidAppear(bool animated)
+    void OnDiscountChanged(NSString key, NSObject value)
     {
-      base.ViewDidAppear(animated);
+      Console.WriteLine(string.Format("The order of sales items has changed: {0} is now {1}", key, value));
+      float d = (float)OptimizelyiOS.Optimizely.NumberForKey(liveVariableDiscount);
+      discountLabel.Text = string.Format("TAKE {0}% OFF FROM NOW UNTIL 9/15", d * 100);
+
+      foreach (var item in storeItems)
+      {
+        item.ChangePrices(d);
+      }
     }
   }
 }

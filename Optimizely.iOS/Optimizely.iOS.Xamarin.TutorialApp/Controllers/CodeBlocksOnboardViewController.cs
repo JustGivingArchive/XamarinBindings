@@ -28,9 +28,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp
       {
         TitleText = "Start shopping now!"
       };
-
-      //button.TouchUpInside += Button_TouchUpInside;
-
+      
       View.AddSubviews(image, label, button);
 
       View.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();

@@ -127,11 +127,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp
       // If you use other tools such as AdX, you will need to make sure that
       // Optimizely's handleOpenURL is called first.  This allows you to connect
       // the app with Optimizely's editor.
-      if (OptimizelyiOS.Optimizely.HandleOpenURL(url))
-      {
-        return true;
-      }
-      return false;
+      return OptimizelyiOS.Optimizely.HandleOpenURL(url);
     }
 
     public void DataFileReceivedNotification(NSNotification notification)

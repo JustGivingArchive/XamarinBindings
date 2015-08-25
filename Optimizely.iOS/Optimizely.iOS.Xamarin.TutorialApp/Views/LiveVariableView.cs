@@ -10,7 +10,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Views
     readonly UIImageView image;
     UILabel title, oldPrice, newPrice;
 
-    public LiveVariableView(string image, string title, string oldPrice, string newPrice)
+    public LiveVariableView(string image, string title, double oldPrice, double discount)
     {
       Layer.CornerRadius = 5;
       ClipsToBounds = true;
@@ -35,15 +35,17 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Views
         Font = UIFont.FromName("Gotham-Light", 10),
         TextColor = Styling.Colors.TextLightBlue
       };
-      var attributedString = new NSAttributedString(oldPrice, strikethroughStyle: NSUnderlineStyle.Single);
+      var attributedString = new NSAttributedString(oldPrice.ToString("##.00"), strikethroughStyle: NSUnderlineStyle.Single);
       this.oldPrice.AttributedText = attributedString;
 
       this.newPrice = new UILabel
       {
-        Text = newPrice,
         Font = UIFont.FromName("Gotham-Medium", 12),
         TextColor = Styling.Colors.TextBlue
       };
+      double oldprice;
+      double.TryParse(this.oldPrice.Text, out oldprice);
+      newPrice.Text = (oldprice - oldPrice * discount).ToString("##.00");
 
       this.AddSubviews(this.image, this.title, this.oldPrice, this.newPrice);
 
@@ -63,8 +65,16 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Views
         this.image.WithSameTop(this).Plus(20),
         this.image.WithSameLeft(this),
         this.image.WithSameRight(this)
-        //this.image.Above(this.title)
       );
+    }
+
+    public void ChangePrices(float discount)
+    {
+      double oldprice;
+      if (double.TryParse(oldPrice.Text, out oldprice))
+      {
+        newPrice.Text = (oldprice - oldprice * discount).ToString("##.00");
+      }
     }
   }
 }

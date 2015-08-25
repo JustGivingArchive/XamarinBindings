@@ -84,16 +84,11 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
 
       Title = "Code Blocks";
 
-      this.NavigationController.NavigationBar.TitleTextAttributes = new UIStringAttributes()
+      this.NavigationController.NavigationBar.TitleTextAttributes = new UIStringAttributes
       {
         ForegroundColor = UIColor.White,
         Font = UIFont.FromName("Gotham-Light", 14)
       };
-    }
-
-    public override void ViewDidAppear(bool animated)
-    {
-      base.ViewDidAppear(animated);
     }
 
     public override void ViewWillDisappear(bool animated)

@@ -19,7 +19,6 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
       TableView.SeparatorColor = UIColor.Clear;
       LoadData();
 
-      //View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromBundle("Images/backgroundImage"));
       TableView.BackgroundView = new UIView(View.Bounds);
       TableView.BackgroundView.BackgroundColor = UIColor.FromPatternImage(UIImage.FromBundle("Images/backgroundImage"));
     }
