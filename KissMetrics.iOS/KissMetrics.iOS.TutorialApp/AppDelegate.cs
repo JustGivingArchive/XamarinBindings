@@ -1,5 +1,6 @@
 ﻿using Foundation;
 using UIKit;
+using KissMetrics.iOS.Binding;
 
 namespace KissMetrics.iOS.TutorialApp
 {
@@ -16,16 +17,27 @@ namespace KissMetrics.iOS.TutorialApp
       set;
     }
 
+    MainController root;
+    UINavigationController nav;
+
     public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
     {
       // create a new window instance based on the screen size
       Window = new UIWindow(UIScreen.MainScreen.Bounds);
+      root = new MainController();
+      nav = new UINavigationController(root);
+      nav.NavigationBar.Translucent = false;
+
+      Window.RootViewController = nav;
 
       // If you have defined a root view controller, set it here:
       // Window.RootViewController = myViewController;
 
       // make the window visible
       Window.MakeKeyAndVisible();
+
+      // Initialize the API
+      KISSmetricsAPI.SharedAPIWithKey("YOUR API KEY");
 
       return true;
     }

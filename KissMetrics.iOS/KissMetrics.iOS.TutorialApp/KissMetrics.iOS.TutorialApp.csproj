@@ -79,6 +79,18 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Lib\Styling.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Lib\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KissMetrics.iOS.Binding\KissMetrics.iOS.Binding.csproj">
+      <Project>{A8EE1A70-455E-402A-9AC6-1E1345B402CC}</Project>
+      <Name>KissMetrics.iOS.Binding</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
