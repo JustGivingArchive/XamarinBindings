@@ -62,5 +62,3 @@ namespace KissMetrics.iOS.TutorialApp
     }
   }
 }
-
-

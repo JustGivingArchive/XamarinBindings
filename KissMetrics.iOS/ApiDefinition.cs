@@ -1,10 +1,9 @@
-﻿using ObjCRuntime;
-using Foundation;
+﻿using Foundation;
 
-namespace KissMetrics.iOS
+namespace KissMetricsiOS
 {
     [BaseType (typeof (NSObject))]
-    public partial interface KISSmetricsAPI {
+    interface KISSmetricsAPI {
         [Static, Export ("sharedAPIWithKey:")]
         KISSmetricsAPI SharedAPIWithKey (string apiKey);
 
@@ -54,4 +53,3 @@ namespace KissMetrics.iOS
         void AutoSetAppProperties ();
     }
 }
-

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-
-using Foundation;
+﻿using Foundation;
 using UIKit;
 using MonoTouch.NUnit.UI;
 
@@ -12,7 +8,7 @@ namespace KissMetrics.iOS.Tests
   // User Interface of the application, as well as listening (and optionally responding) to
   // application events from iOS.
   [Register("UnitTestAppDelegate")]
-  public partial class UnitTestAppDelegate : UIApplicationDelegate
+  public class UnitTestAppDelegate : UIApplicationDelegate
   {
     // class-level declarations
     UIWindow window;
@@ -43,4 +39,3 @@ namespace KissMetrics.iOS.Tests
     }
   }
 }
-
