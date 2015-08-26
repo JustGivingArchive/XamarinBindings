@@ -185,5 +185,7 @@
     <BundleResource Include="Resources\Fonts\Gotham-Light.otf" />
     <BundleResource Include="Resources\Fonts\Gotham-Medium.otf" />
     <BundleResource Include="Resources\Fonts\Gotham-MediumItalic.otf" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
   </ItemGroup>
 </Project>
