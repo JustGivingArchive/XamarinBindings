@@ -37,7 +37,7 @@ namespace KissMetrics.iOS.TutorialApp
       Window.MakeKeyAndVisible();
 
       // Initialize the API
-      KISSmetricsAPI.SharedAPIWithKey("YOUR API KEY");
+      KISSmetricsAPI.SharedAPIWithKey("90e9f5b6ee03267f70692818443db3fc433d938d");
 
       return true;
     }
