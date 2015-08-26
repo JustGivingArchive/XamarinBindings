@@ -87,13 +87,12 @@
     <Compile Include="Main.cs" />
     <Compile Include="UnitTestAppDelegate.cs" />
     <Compile Include="KissMetricsSDKTests.cs" />
-    <Compile Include="Tests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\KissMetrics.iOS.csproj">
-      <Project>{991D944A-CB98-434F-AA89-F57269C2A452}</Project>
-      <Name>KissMetrics.iOS</Name>
+    <ProjectReference Include="..\KissMetrics.iOS.Binding\KissMetrics.iOS.Binding.csproj">
+      <Project>{A8EE1A70-455E-402A-9AC6-1E1345B402CC}</Project>
+      <Name>KissMetrics.iOS.Binding</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
