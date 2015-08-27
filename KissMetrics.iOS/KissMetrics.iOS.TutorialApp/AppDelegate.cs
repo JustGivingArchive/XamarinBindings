@@ -24,6 +24,10 @@ namespace KissMetrics.iOS.TutorialApp
     {
       // create a new window instance based on the screen size
       Window = new UIWindow(UIScreen.MainScreen.Bounds);
+
+      // [KISSmetrics] Initialize KissMetrics API
+      KISSmetricsAPI.SharedAPIWithKey("90e9f5b6ee03267f70692818443db3fc433d938d");
+
       root = new MainController();
       nav = new UINavigationController(root);
       nav.NavigationBar.Translucent = false;
@@ -36,8 +40,30 @@ namespace KissMetrics.iOS.TutorialApp
       // make the window visible
       Window.MakeKeyAndVisible();
 
-      // Initialize the API
-      KISSmetricsAPI.SharedAPIWithKey("90e9f5b6ee03267f70692818443db3fc433d938d");
+      // [KISSmetrics] Calling this records two events: 
+      // Installed App
+      // Updated App
+      KISSmetricsAPI.SharedAPI.AutoRecordInstalls();
+
+      // [KISSmetrics] Calling this sets the following properties:
+      // App Version : 1.0.0
+      // App Build : 101
+      KISSmetricsAPI.SharedAPI.AutoSetAppProperties();
+
+      // [KISSmetrics] Calling this sets the following properties:
+      // Device Manufacturer: Apple
+      // Device Platform: iPhone
+      // Device Model: iPhone 5s
+      // System Name: iOS
+      // System Version: 7.0.4
+      KISSmetricsAPI.SharedAPI.AutoSetHardwareProperties();
+
+      // [KISSmetrics] Automatically records the following events:
+      // "Launched Application"
+      // "Application moved to background"
+      // "Application became active"
+      // "Application Terminated"
+      KISSmetricsAPI.SharedAPI.AutoRecordAppLifecycle();
 
       return true;
     }

@@ -1,5 +1,4 @@
-﻿using System;
-using ObjCRuntime;
+﻿using ObjCRuntime;
 
 namespace KissMetrics.iOS.Binding
 {
@@ -11,4 +10,3 @@ namespace KissMetrics.iOS.Binding
     OncePerIdentity
   }
 }
-

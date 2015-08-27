@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="MonoTouch.Dialog-1" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
@@ -80,12 +81,10 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Controllers\MainController.cs" />
-    <Compile Include="Lib\Styling.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="Lib\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\KissMetrics.iOS.Binding\KissMetrics.iOS.Binding.csproj">
