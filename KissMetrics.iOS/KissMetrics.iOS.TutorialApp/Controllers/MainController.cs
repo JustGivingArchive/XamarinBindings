@@ -71,13 +71,13 @@ namespace KissMetrics.iOS.TutorialApp
           new StringElement("Track event per install with properties", () =>
             {
               // [KISSmetrics] Track an event only once per install with properties
-              api.Record("Event per install", new NSDictionary(new NSString("Value"), new NSString("My property")), KMARecordCondition.OncePerInstall);
+              api.Record("Track event per install with properties", new NSDictionary(new NSString("Value"), new NSString("My property")), KMARecordCondition.OncePerInstall);
               ShowAlert("Track event", "This event track only once per install");
             }),
           new StringElement("Track event per set identity with properties", () =>
             {
               // [KISSmetrics] Track an event only once per set identity with properties
-              api.Record("Event per install", new NSDictionary(new NSString("Value"), new NSString("My property")), KMARecordCondition.OncePerIdentity);
+              api.Record("Track event per set identity with properties", new NSDictionary(new NSString("Value"), new NSString("My property")), KMARecordCondition.OncePerIdentity);
               ShowAlert("Track event", "This event track only once per identity");
             }),
         },
