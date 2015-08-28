@@ -305,6 +305,7 @@ namespace GigyaSDK.iOS
 		string JSONString { get; }
   }
 
+  // __attribute((deprecated("Use [Gigya setSocializeDelegate:] with a GSSocializeDelegate instead")))
   // @protocol GSSessionDelegate <NSObject>
   [Protocol, Model]
   [BaseType(typeof(NSObject))]
