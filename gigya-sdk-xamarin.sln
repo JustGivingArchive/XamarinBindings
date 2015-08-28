@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GigyaSDK.Android", "GigyaSDK.Android\GigyaSDK.Android.csproj", "{A352983C-916C-4B9B-8EDC-964471BA3F18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GigyaSDK.iOS", "GigyaSDK.iOS\GigyaSDK.iOS.csproj", "{1A5A55FD-927C-4EE3-8A2B-48736572A47B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A5A55FD-927C-4EE3-8A2B-48736572A47B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A5A55FD-927C-4EE3-8A2B-48736572A47B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A5A55FD-927C-4EE3-8A2B-48736572A47B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A5A55FD-927C-4EE3-8A2B-48736572A47B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A352983C-916C-4B9B-8EDC-964471BA3F18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A352983C-916C-4B9B-8EDC-964471BA3F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A352983C-916C-4B9B-8EDC-964471BA3F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A352983C-916C-4B9B-8EDC-964471BA3F18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
