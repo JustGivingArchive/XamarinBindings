@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{23546240-9999-4931-95C1-7FC8982D39D5}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Optimizely.iOS.Xamarin.TutorialApp</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchLink>Full</MtouchLink>
+    <AssemblyName>OptimizelyiOS.TutorialApp</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <AssemblyName>Optimizely.iOS.Xamarin.TutorialApp</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>i386</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <AssemblyName>OptimizelyiOS.TutorialApp</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchLink>Full</MtouchLink>
+    <MtouchI18n>
+    </MtouchI18n>
+    <AssemblyName>Optimizely.iOS.Xamarin.TutorialApp</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Cirrious.FluentLayouts.Touch">
+      <HintPath>..\packages\Cirrious.FluentLayout.2.0.0\lib\Xamarin.iOS10\Cirrious.FluentLayouts.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoTouch.Dialog-1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Controllers\WelcomeController.cs" />
+    <Compile Include="Controllers\LandingTableViewController.cs" />
+    <Compile Include="Lib\Styling.cs" />
+    <Compile Include="Controllers\InfoViewController.cs" />
+    <Compile Include="Lib\Models\LandingTableModel.cs" />
+    <Compile Include="Controllers\VisualEditorViewController.cs" />
+    <Compile Include="Controllers\LiveVariablesViewController.cs" />
+    <Compile Include="Controllers\CodeBlocksViewController.cs" />
+    <Compile Include="Views\CustomElements\CustomButton.cs" />
+    <Compile Include="Views\CustomElements\CustomTextField.cs" />
+    <Compile Include="Views\LiveVariableView.cs" />
+    <Compile Include="Controllers\CodeBlocksOnboardViewController.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Optimizely.iOS.csproj">
+      <Project>{D64BCAD7-15DB-439B-B63D-C901E3C01FE6}</Project>
+      <Name>Optimizely.iOS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Views\" />
+    <Folder Include="Views\CustomElements\" />
+    <Folder Include="Resources\Images\" />
+    <Folder Include="Resources\Fonts\" />
+    <Folder Include="Lib\" />
+    <Folder Include="Lib\Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\AppIcon5858.png" />
+    <BundleResource Include="Resources\Images\AppIcon8080.png" />
+    <BundleResource Include="Resources\Images\AppIcon8787.png" />
+    <BundleResource Include="Resources\Images\Default.png" />
+    <BundleResource Include="Resources\Images\Default%402x.png" />
+    <BundleResource Include="Resources\Images\Default%403x.png" />
+    <BundleResource Include="Resources\Images\Default%40x3.png" />
+    <BundleResource Include="Resources\Images\Default_iphone4s.png" />
+    <BundleResource Include="Resources\Images\Letter-I-inside-circle.png" />
+    <BundleResource Include="Resources\Images\appMenu_onTap.png" />
+    <BundleResource Include="Resources\Images\appicon180180.png" />
+    <BundleResource Include="Resources\Images\backgroundImage.png" />
+    <BundleResource Include="Resources\Images\backgroundImage%402x.png" />
+    <BundleResource Include="Resources\Images\backgroundImage%40x2.png" />
+    <BundleResource Include="Resources\Images\backgroundImage%40x3.png" />
+    <BundleResource Include="Resources\Images\blueLogoWelcomeScreen.png" />
+    <BundleResource Include="Resources\Images\blueLogoWelcomeScreen%402x.png" />
+    <BundleResource Include="Resources\Images\blueLogoWelcomeScreen%403x.png" />
+    <BundleResource Include="Resources\Images\codeBlocksIcon.png" />
+    <BundleResource Include="Resources\Images\codeBlocksIcon%402x.png" />
+    <BundleResource Include="Resources\Images\codeBlocksIcon%403x.png" />
+    <BundleResource Include="Resources\Images\gear1.png" />
+    <BundleResource Include="Resources\Images\gear1%402x.png" />
+    <BundleResource Include="Resources\Images\gear1%403x.png" />
+    <BundleResource Include="Resources\Images\gear2.png" />
+    <BundleResource Include="Resources\Images\gear2%402x.png" />
+    <BundleResource Include="Resources\Images\gear2%403x.png" />
+    <BundleResource Include="Resources\Images\gear3.png" />
+    <BundleResource Include="Resources\Images\gear3%402x.png" />
+    <BundleResource Include="Resources\Images\gear3%403x.png" />
+    <BundleResource Include="Resources\Images\gear4.png" />
+    <BundleResource Include="Resources\Images\gear4%402x.png" />
+    <BundleResource Include="Resources\Images\gear4%403x.png" />
+    <BundleResource Include="Resources\Images\gear5.png" />
+    <BundleResource Include="Resources\Images\gear5%402x.png" />
+    <BundleResource Include="Resources\Images\gear5%403x.png" />
+    <BundleResource Include="Resources\Images\gear6.png" />
+    <BundleResource Include="Resources\Images\gear6%402x.png" />
+    <BundleResource Include="Resources\Images\gear6%403x.png" />
+    <BundleResource Include="Resources\Images\liveVariablesIcon.png" />
+    <BundleResource Include="Resources\Images\liveVariablesIcon%402x.png" />
+    <BundleResource Include="Resources\Images\liveVariablesIcon%403x.png" />
+    <BundleResource Include="Resources\Images\optimizely_logo_BLUE1%402x.png" />
+    <BundleResource Include="Resources\Images\optimizely_logo_darkblue%402x.png" />
+    <BundleResource Include="Resources\Images\picture.jpg" />
+    <BundleResource Include="Resources\Images\smallWhiteLogoforStatusBar.png" />
+    <BundleResource Include="Resources\Images\smallWhiteLogoforStatusBar%402x.png" />
+    <BundleResource Include="Resources\Images\smallWhiteLogoforStatusBar%403x.png" />
+    <BundleResource Include="Resources\Images\visualEditorIcon.png" />
+    <BundleResource Include="Resources\Images\visualEditorIcon%402x.png" />
+    <BundleResource Include="Resources\Images\visualEditorIcon%403x.png" />
+    <BundleResource Include="Resources\Images\widgetCoLogo_green.png" />
+    <BundleResource Include="Resources\Images\widgetCoLogo_green%402x.png" />
+    <BundleResource Include="Resources\Images\widgetCoLogo_green%403x.png" />
+    <BundleResource Include="Resources\Images\widgetCoLogo_red.png" />
+    <BundleResource Include="Resources\Images\widgetCoLogo_red%403x.png" />
+    <BundleResource Include="Resources\Fonts\Gotham-Bold.otf" />
+    <BundleResource Include="Resources\Fonts\Gotham-BoldItalic.otf" />
+    <BundleResource Include="Resources\Fonts\Gotham-Light.otf" />
+    <BundleResource Include="Resources\Fonts\Gotham-Medium.otf" />
+    <BundleResource Include="Resources\Fonts\Gotham-MediumItalic.otf" />
+  </ItemGroup>
+</Project>
