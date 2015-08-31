@@ -13,6 +13,7 @@ namespace GigyaSDK.iOS.Tests
     // class-level declarations
     UIWindow window;
     TouchRunner runner;
+    public static UINavigationController NavigationController;
 
     //
     // This method is invoked when the application has loaded and is ready to run. In this
@@ -30,8 +31,12 @@ namespace GigyaSDK.iOS.Tests
       // register every tests included in the main application/assembly
       runner.Add(System.Reflection.Assembly.GetExecutingAssembly());
 
-      window.RootViewController = new UINavigationController(runner.GetViewController());
-			
+      Gigya.InitWithAPIKey("3_Sh5iokMA9q0k5i8s5P4K3O8eYAax9Q0QPLPsXO0MRa4YXiETXRTTypmr8iYAlfRz", UIApplication.SharedApplication, new NSDictionary());
+
+      NavigationController = new UINavigationController(runner.GetViewController());
+
+      window.RootViewController = NavigationController;
+
       // make the window visible
       window.MakeKeyAndVisible();
 			

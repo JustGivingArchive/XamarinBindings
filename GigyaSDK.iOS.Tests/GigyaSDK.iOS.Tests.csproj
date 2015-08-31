@@ -75,6 +75,19 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="UnitTestAppDelegate.cs" />
+    <Compile Include="GSSessionTests.cs" />
+    <Compile Include="GSObjectTests.cs" />
+    <Compile Include="GSResponceTests.cs" />
+    <Compile Include="GSRequestTests.cs" />
+    <Compile Include="GSUserTests.cs" />
+    <Compile Include="GSSocializeDelegateTests.cs" />
+    <Compile Include="GSAccountsDelegateTests.cs" />
+    <Compile Include="GSWebBridgeDelegateTests.cs" />
+    <Compile Include="GSWebBridgeTests.cs" />
+    <Compile Include="GSPluginViewDelegateTests.cs" />
+    <Compile Include="GSPluginViewTests.cs" />
+    <Compile Include="GigyaTests.cs" />
+    <Compile Include="GSAccountTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
