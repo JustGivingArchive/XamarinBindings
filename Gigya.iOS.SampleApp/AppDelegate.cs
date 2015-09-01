@@ -16,13 +16,18 @@ namespace Gigya.iOS.SampleApp
       set;
     }
 
+    UINavigationController nav;
+    MainController main;
+
     public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
     {
       // create a new window instance based on the screen size
       Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
       // If you have defined a root view controller, set it here:
-      // Window.RootViewController = myViewController;
+      main = new MainController();
+      nav = new UINavigationController(main);
+      Window.RootViewController = nav;
 
       // make the window visible
       Window.MakeKeyAndVisible();
