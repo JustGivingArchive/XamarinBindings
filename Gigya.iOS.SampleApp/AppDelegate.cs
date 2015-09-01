@@ -24,6 +24,8 @@ namespace Gigya.iOS.SampleApp
       // create a new window instance based on the screen size
       Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
+      GigyaSDK.iOS.Gigya.InitWithAPIKey("3_Sh5iokMA9q0k5i8s5P4K3O8eYAax9Q0QPLPsXO0MRa4YXiETXRTTypmr8iYAlfRz", UIApplication.SharedApplication, new NSDictionary());
+
       // If you have defined a root view controller, set it here:
       main = new MainController();
       nav = new UINavigationController(main);
@@ -59,11 +61,17 @@ namespace Gigya.iOS.SampleApp
     {
       // Restart any tasks that were paused (or not yet started) while the application was inactive. 
       // If the application was previously in the background, optionally refresh the user interface.
+      GigyaSDK.iOS.Gigya.HandleDidBecomeActive();
     }
 
     public override void WillTerminate(UIApplication application)
     {
       // Called when the application is about to terminate. Save data, if needed. See also DidEnterBackground.
+    }
+
+    public override bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
+    {
+      return GigyaSDK.iOS.Gigya.HandleOpenURL(url, application, sourceApplication, annotation);
     }
   }
 }

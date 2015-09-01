@@ -82,12 +82,12 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\GigyaSDK.iOS\GigyaSDK.iOS.csproj">
       <Project>{1A5A55FD-927C-4EE3-8A2B-48736572A47B}</Project>
       <Name>GigyaSDK.iOS</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\" />
   </ItemGroup>
 </Project>
