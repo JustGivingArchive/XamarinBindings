@@ -1,8 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-
-using Foundation;
+﻿using Foundation;
 using UIKit;
 using MonoTouch.NUnit.UI;
 
@@ -43,4 +39,3 @@ namespace TrustDefender.iOS.Tests
     }
   }
 }
-

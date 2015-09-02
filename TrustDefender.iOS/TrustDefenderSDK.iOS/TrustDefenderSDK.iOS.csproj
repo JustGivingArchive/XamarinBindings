@@ -4,11 +4,11 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectTypeGuids>{8FFB629D-F513-41CE-95D2-7ECE97B6EEEC};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{019224B7-4323-49D2-872C-236BC097F0C9}</ProjectGuid>
+    <ProjectGuid>{5465E284-5411-4DB4-BB5B-C838AE387DFA}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>TrustDefender.iOS</RootNamespace>
+    <RootNamespace>TrustDefenderSDK.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>TrustDefender.iOS</AssemblyName>
+    <AssemblyName>TrustDefenderSDK.iOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

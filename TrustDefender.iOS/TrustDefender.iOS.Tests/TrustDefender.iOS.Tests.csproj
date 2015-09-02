@@ -75,12 +75,14 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="UnitTestAppDelegate.cs" />
+    <Compile Include="ConstantsTests.cs" />
+    <Compile Include="TrustDefenderMobileTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\TrustDefender.iOS\TrustDefender.iOS.csproj">
-      <Project>{019224B7-4323-49D2-872C-236BC097F0C9}</Project>
-      <Name>TrustDefender.iOS</Name>
+    <ProjectReference Include="..\TrustDefenderSDK.iOS\TrustDefenderSDK.iOS.csproj">
+      <Project>{5465E284-5411-4DB4-BB5B-C838AE387DFA}</Project>
+      <Name>TrustDefenderSDK.iOS</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

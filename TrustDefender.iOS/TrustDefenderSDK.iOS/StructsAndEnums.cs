@@ -1,6 +1,6 @@
 ﻿using ObjCRuntime;
 
-namespace TrustDefender.iOS
+namespace TrustDefenderSDK.iOS
 {
   [Native]
   public enum THMStatusCode : long
