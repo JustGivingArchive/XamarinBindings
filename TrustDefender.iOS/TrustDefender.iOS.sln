@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrustDefender.iOS.Tests", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrustDefenderSDK.iOS", "TrustDefenderSDK.iOS\TrustDefenderSDK.iOS.csproj", "{5465E284-5411-4DB4-BB5B-C838AE387DFA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrustDefender.iOS.SampleApp", "TrustDefender.iOS.SampleApp\TrustDefender.iOS.SampleApp.csproj", "{44A37FC2-549E-44C2-98D7-9F006133E263}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,18 @@ Global
 		Debug|iPhone = Debug|iPhone
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44A37FC2-549E-44C2-98D7-9F006133E263}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{44A37FC2-549E-44C2-98D7-9F006133E263}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{44A37FC2-549E-44C2-98D7-9F006133E263}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{44A37FC2-549E-44C2-98D7-9F006133E263}.Debug|iPhone.Build.0 = Debug|iPhone
+		{44A37FC2-549E-44C2-98D7-9F006133E263}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{44A37FC2-549E-44C2-98D7-9F006133E263}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{44A37FC2-549E-44C2-98D7-9F006133E263}.Release|Any CPU.ActiveCfg = Release|iPhone
+		{44A37FC2-549E-44C2-98D7-9F006133E263}.Release|Any CPU.Build.0 = Release|iPhone
+		{44A37FC2-549E-44C2-98D7-9F006133E263}.Release|iPhone.ActiveCfg = Release|iPhone
+		{44A37FC2-549E-44C2-98D7-9F006133E263}.Release|iPhone.Build.0 = Release|iPhone
+		{44A37FC2-549E-44C2-98D7-9F006133E263}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{44A37FC2-549E-44C2-98D7-9F006133E263}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{5465E284-5411-4DB4-BB5B-C838AE387DFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5465E284-5411-4DB4-BB5B-C838AE387DFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5465E284-5411-4DB4-BB5B-C838AE387DFA}.Debug|iPhone.ActiveCfg = Debug|Any CPU
