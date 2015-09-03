@@ -98,7 +98,7 @@ namespace GigyaSDK.iOS.Tests
     {
       try
       {
-        Gigya.SetSessionDelegate(null);
+        Gigya.SetSessionDelegate(Gigya.SessionDelegate());
       }
       catch (Exception e)
       {
@@ -168,7 +168,7 @@ namespace GigyaSDK.iOS.Tests
     {
       try
       {        
-        Gigya.LoginToProvider("provider");
+        Gigya.LoginToProvider("facebook");
       }
       catch (Exception e)
       {
@@ -182,7 +182,7 @@ namespace GigyaSDK.iOS.Tests
     {
       try
       {
-        Gigya.ShowLoginDialogOver(UnitTestAppDelegate.NavigationController, "provider");
+        Gigya.ShowLoginDialogOver(UnitTestAppDelegate.NavigationController, "facebook");
       }
       catch (Exception e)
       {
@@ -196,7 +196,7 @@ namespace GigyaSDK.iOS.Tests
     {
       try
       {
-        Gigya.LoginToProvider("provider", new NSDictionary(), UserInfoHandler);
+        Gigya.LoginToProvider("facebook", new NSDictionary(), UserInfoHandler);
       }
       catch (Exception e)
       {
@@ -210,7 +210,7 @@ namespace GigyaSDK.iOS.Tests
     {
       try
       {
-        Gigya.ShowLoginDialogOver(UnitTestAppDelegate.NavigationController, "provider", new NSDictionary(), UserInfoHandler);
+        Gigya.ShowLoginDialogOver(UnitTestAppDelegate.NavigationController, "facebook", new NSDictionary(), UserInfoHandler);
       }
       catch (Exception e)
       {
@@ -224,7 +224,7 @@ namespace GigyaSDK.iOS.Tests
     {
       try
       {
-        Gigya.LoginToProvider("provider", new NSDictionary(), UnitTestAppDelegate.NavigationController, UserInfoHandler);
+        Gigya.LoginToProvider("facebook", new NSDictionary(), UnitTestAppDelegate.NavigationController, UserInfoHandler);
       }
       catch (Exception e)
       {
@@ -238,7 +238,7 @@ namespace GigyaSDK.iOS.Tests
     {
       try
       {
-        Gigya.ShowLoginDialogOver(UnitTestAppDelegate.NavigationController, "provider");
+        Gigya.ShowLoginDialogOver(UnitTestAppDelegate.NavigationController, "facebook");
       }
       catch (Exception e)
       {
@@ -266,7 +266,7 @@ namespace GigyaSDK.iOS.Tests
     {
       try
       {
-        Gigya.ShowLoginProvidersDialogOver(UnitTestAppDelegate.NavigationController, new [] { new NSObject() }, new NSDictionary(), UserInfoHandler);
+        Gigya.ShowLoginProvidersDialogOver(UnitTestAppDelegate.NavigationController, new [] { new NSString("facebook") }, new NSDictionary(), UserInfoHandler);
       }
       catch (Exception e)
       {
@@ -280,7 +280,7 @@ namespace GigyaSDK.iOS.Tests
     {
       try
       {
-        Gigya.ShowLoginProvidersPopoverFrom(UnitTestAppDelegate.NavigationController.View, new [] { new NSObject() }, new NSDictionary(), UserInfoHandler);
+        Gigya.ShowLoginProvidersPopoverFrom(UnitTestAppDelegate.NavigationController.View, new [] { new NSString("facebook"), new NSString("twitter"), new NSString("googleplus") }, new NSDictionary(), UserInfoHandler);
       }
       catch (Exception e)
       {
@@ -317,17 +317,12 @@ namespace GigyaSDK.iOS.Tests
       Assert.Pass();
     }
 
-    void ResponseHandler(GSResponse arg0, NSError arg1)
-    {
-      
-    }
-
     [Test]
     public void AddConnectionToProvider()
     {
       try
       {
-        Gigya.AddConnectionToProvider("provider");
+        Gigya.AddConnectionToProvider("facebook");
       }
       catch (Exception e)
       {
@@ -341,7 +336,7 @@ namespace GigyaSDK.iOS.Tests
     {
       try
       {
-        Gigya.ShowAddConnectionDialogOver(UnitTestAppDelegate.NavigationController, "provider");
+        Gigya.ShowAddConnectionDialogOver(UnitTestAppDelegate.NavigationController, "facebook");
       }
       catch (Exception e)
       {
@@ -355,7 +350,7 @@ namespace GigyaSDK.iOS.Tests
     {
       try
       {
-        Gigya.AddConnectionToProvider("provider", new NSDictionary(), UserInfoHandler);
+        Gigya.AddConnectionToProvider("facebook", new NSDictionary(), UserInfoHandler);
       }
       catch (Exception e)
       {
@@ -364,17 +359,12 @@ namespace GigyaSDK.iOS.Tests
       Assert.Pass();
     }
 
-    void UserInfoHandler(GSUser arg0, NSError arg1)
-    {
-      
-    }
-
     [Test]
     public void ShowAddConnectionDialogOverWithParameters()
     {
       try
       {
-        Gigya.ShowAddConnectionDialogOver(UnitTestAppDelegate.NavigationController, "provider", new NSDictionary(), UserInfoHandler);
+        Gigya.ShowAddConnectionDialogOver(UnitTestAppDelegate.NavigationController, "facebook", new NSDictionary(), UserInfoHandler);
       }
       catch (Exception e)
       {
@@ -388,7 +378,7 @@ namespace GigyaSDK.iOS.Tests
     {
       try
       {
-        Gigya.AddConnectionToProvider("provider", new NSDictionary(), UnitTestAppDelegate.NavigationController, UserInfoHandler);
+        Gigya.AddConnectionToProvider("facebook", new NSDictionary(), UnitTestAppDelegate.NavigationController, UserInfoHandler);
       }
       catch (Exception e)
       {
@@ -458,7 +448,7 @@ namespace GigyaSDK.iOS.Tests
     {
       try
       {
-        Gigya.RemoveConnectionToProvider("provider");
+        Gigya.RemoveConnectionToProvider("facebook");
       }
       catch (Exception e)
       {
@@ -472,7 +462,7 @@ namespace GigyaSDK.iOS.Tests
     {
       try
       {
-        Gigya.RemoveConnectionToProvider("provider", UserInfoHandler);
+        Gigya.RemoveConnectionToProvider("facebook", UserInfoHandler);
       }
       catch (Exception e)
       {
@@ -509,17 +499,12 @@ namespace GigyaSDK.iOS.Tests
       Assert.Pass();
     }
 
-    void PluginCompletionHandler(bool arg0, NSError arg1)
-    {
-      
-    }
-
     [Test]
     public void ShowPluginDialogOverWithDelegate()
     {
       try
       {
-        Gigya.ShowPluginDialogOver(UnitTestAppDelegate.NavigationController, "plugin", new NSDictionary(), PluginCompletionHandler, null);
+        Gigya.ShowPluginDialogOver(UnitTestAppDelegate.NavigationController, "plugin", new NSDictionary(), PluginCompletionHandler, new GSPluginViewDelegate());
       }
       catch (Exception e)
       {
@@ -540,11 +525,6 @@ namespace GigyaSDK.iOS.Tests
         Assert.Fail(e.Message);
       }
       Assert.Pass();
-    }
-
-    void PermissionRequestResultHandler(bool arg0, NSError arg1, NSObject[] arg2)
-    {
-      
     }
 
     [Test]
@@ -671,6 +651,27 @@ namespace GigyaSDK.iOS.Tests
         Assert.Fail(e.Message);
       }
       Assert.Pass();
+    }
+
+    void PermissionRequestResultHandler(bool arg0, NSError arg1, NSObject[] arg2)
+    {
+
+    }
+
+    void PluginCompletionHandler(bool arg0, NSError arg1)
+    {
+
+    }
+
+    void ResponseHandler(GSResponse arg0, NSError arg1)
+    {
+
+    }
+
+
+    void UserInfoHandler(GSUser arg0, NSError arg1)
+    {
+      UnitTestAppDelegate.User = arg0;
     }
   }
 }

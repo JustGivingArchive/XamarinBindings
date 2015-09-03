@@ -14,6 +14,7 @@ namespace GigyaSDK.iOS.Tests
     UIWindow window;
     TouchRunner runner;
     public static UINavigationController NavigationController;
+    public static GSUser User;
 
     //
     // This method is invoked when the application has loaded and is ready to run. In this
@@ -40,7 +41,18 @@ namespace GigyaSDK.iOS.Tests
       // make the window visible
       window.MakeKeyAndVisible();
 			
-      return true;
+      return Facebook.CoreKit.ApplicationDelegate.SharedInstance.FinishedLaunching(app, options);
+    }
+
+    public override bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
+    {
+      return Facebook.CoreKit.ApplicationDelegate.SharedInstance.OpenUrl(application, url, sourceApplication, annotation);
+    }
+
+    public override void OnActivated(UIApplication application)
+    {
+      Facebook.CoreKit.AppEvents.ActivateApp();
+      Gigya.HandleDidBecomeActive();
     }
   }
 }

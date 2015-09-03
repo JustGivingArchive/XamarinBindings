@@ -68,15 +68,16 @@ namespace GigyaSDK.iOS.Tests
     [Test]
     public void Secret()
     {
+      string r = string.Empty;
       try 
       {
-        session.Secret = "secret";
+        r = session.Secret;
       }
       catch(Exception e)
       {
         Assert.Fail(e.Message);
       }
-      Assert.Pass();
+      Assert.Pass(r);
     }
 
     [Test]
