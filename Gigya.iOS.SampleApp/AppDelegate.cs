@@ -34,7 +34,8 @@ namespace Gigya.iOS.SampleApp
       // make the window visible
       Window.MakeKeyAndVisible();
 
-      return true;
+      return Facebook.CoreKit.ApplicationDelegate.SharedInstance.FinishedLaunching(application, launchOptions);
+      ;
     }
 
     public override void OnResignActivation(UIApplication application)
@@ -61,6 +62,7 @@ namespace Gigya.iOS.SampleApp
     {
       // Restart any tasks that were paused (or not yet started) while the application was inactive. 
       // If the application was previously in the background, optionally refresh the user interface.
+      Facebook.CoreKit.AppEvents.ActivateApp();
       GigyaSDK.iOS.Gigya.HandleDidBecomeActive();
     }
 
@@ -71,7 +73,8 @@ namespace Gigya.iOS.SampleApp
 
     public override bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
     {
-      return GigyaSDK.iOS.Gigya.HandleOpenURL(url, application, sourceApplication, annotation);
+      //return GigyaSDK.iOS.Gigya.HandleOpenURL(url, application, sourceApplication, annotation);
+      return Facebook.CoreKit.ApplicationDelegate.SharedInstance.OpenUrl(application, url, sourceApplication, annotation);
     }
   }
 }

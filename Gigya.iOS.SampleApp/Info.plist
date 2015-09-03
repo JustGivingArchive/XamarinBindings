@@ -13,7 +13,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MinimumOSVersion</key>
-	<string>8.1</string>
+	<string>8.4</string>
 	<key>UIDeviceFamily</key>
 	<array>
 		<integer>1</integer>
@@ -42,17 +42,15 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleURLName</key>
-			<string>com.scorebig.gigya.ios.sampleapp</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.scorebig.gigya.ios.sampleapp</string>
+				<string>fb849992935048401</string>
 			</array>
-			<key>CFBundleURLTypes</key>
-			<string>Editor</string>
 		</dict>
 	</array>
-	<key>GigyaLoginDontLeaveApp</key>
-	<true/>
+	<key>FacebookAppID</key>
+	<string>849992935048401</string>
+	<key>FacebookDisplayName</key>
+	<string>ScoreBig.com - Test</string>
 </dict>
 </plist>
