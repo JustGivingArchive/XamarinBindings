@@ -9,11 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zendesk.iOS", "..\Zendesk.i
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adjust.iOS", "..\Adjust.iOS\Adjust.iOS.csproj", "{A8CB80C1-F506-4520-B9FA-102AAF1D117D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optimizely.iOS.Xamarin.TutorialApp", "Optimizely.iOS.Xamarin.TutorialApp\Optimizely.iOS.Xamarin.TutorialApp.csproj", "{23546240-9999-4931-95C1-7FC8982D39D5}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optimizely.iOS.Xamarin.TutorialApp.Test", "Optimizely.iOS.Xamarin.TutorialApp.Test\Optimizely.iOS.Xamarin.TutorialApp.Test.csproj", "{53890721-BB70-40F6-BF11-B5246C70B55A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KissMetrics.iOS.Binding", "..\KissMetrics.iOS\KissMetrics.iOS.Binding\KissMetrics.iOS.Binding.csproj", "{A8EE1A70-455E-402A-9AC6-1E1345B402CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optimizely.iOS.TutorialApp.Test", "Optimizely.iOS.TutorialApp.Test\Optimizely.iOS.TutorialApp.Test.csproj", "{53890721-BB70-40F6-BF11-B5246C70B55A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optimizely.iOS.TutorialApp", "Optimizely.iOS.TutorialApp\Optimizely.iOS.TutorialApp.csproj", "{23546240-9999-4931-95C1-7FC8982D39D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
