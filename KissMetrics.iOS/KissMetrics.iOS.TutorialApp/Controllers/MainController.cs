@@ -90,14 +90,14 @@ namespace KissMetrics.iOS.TutorialApp
               // than the previously set value or if a value has not yet been set for the property. If an identity is
               // cleared via clearIdentity, these properties may again be set for the next identity.
               api.SetDistinct(new NSString("7.1"), "OS version");
-              ShowAlert("Properies", "Distinct setted");
+              ShowAlert("Properies", "Distinct set");
             }),          
           new StringElement("Set properties", () =>
             {
               // [KISSmetrics] Set Properties
               // Sets one or more properties on a user.
               api.Set(new NSDictionary());
-              ShowAlert("Properies", "Properties setted");
+              ShowAlert("Properies", "Properties set");
             })
         }
       };      
