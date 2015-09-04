@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDisplayName</key>
+	<string>Optimizely.iOS.Xamarin.TutorialApp</string>
+	<key>CFBundleIdentifier</key>
+	<string>Optimizely.$(PRODUCT_NAME:rfc1034identifier)</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>MinimumOSVersion</key>
+	<string>8.1</string>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+	</array>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Fonts/Gotham-Bold.otf</string>
+		<string>Fonts/Gotham-BoldItalic.otf</string>
+		<string>Fonts/Gotham-Light.otf</string>
+		<string>Fonts/Gotham-Medium.otf</string>
+		<string>Fonts/Gotham-MediumItalic.otf</string>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.optimizely</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>optly3391160510</string>
+			</array>
+			<key>CFBundleURLTypes</key>
+			<string>Editor</string>
+		</dict>
+	</array>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>Images/AppIcon5858</string>
+		<string>Images/AppIcon8080</string>
+	</array>
+</dict>
+</plist>
