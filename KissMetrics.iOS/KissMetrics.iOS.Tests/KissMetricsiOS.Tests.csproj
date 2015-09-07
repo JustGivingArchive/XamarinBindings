@@ -6,11 +6,11 @@
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{BB05ADE0-73F1-4649-A370-7C2EDA9BE49D}</ProjectGuid>
+    <ProjectGuid>{241B8F05-74A5-4E04-BDB1-7C6A345700D0}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>KissMetrics.iOS.TutorialApp</RootNamespace>
+    <RootNamespace>KissMetrics.iOS.Tests</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>KissMetrics.iOS.TutorialApp</AssemblyName>
+    <AssemblyName>KissMetrics.iOS.Tests</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,8 +22,11 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>i386</MtouchArch>
-    <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchI18n>
+    </MtouchI18n>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>full</DebugType>
@@ -59,19 +62,22 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchLink>Full</MtouchLink>
+    <MtouchI18n>
+    </MtouchI18n>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
-    <Reference Include="MonoTouch.Dialog-1" />
+    <Reference Include="MonoTouch.NUnitLite" />
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -79,17 +85,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
-    <Compile Include="AppDelegate.cs" />
-    <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="UnitTestAppDelegate.cs" />
+    <Compile Include="KissMetricsSDKTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\KissMetrics.iOS.Binding\KissMetrics.iOS.Binding.csproj">
+    <ProjectReference Include="..\KissMetrics.iOS.Binding\KissMetrics.iOS.csproj">
       <Project>{A8EE1A70-455E-402A-9AC6-1E1345B402CC}</Project>
-      <Name>KissMetrics.iOS.Binding</Name>
+      <Name>KissMetrics.iOS</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
