@@ -68,5 +68,3 @@ namespace TrustDefender.iOS.SampleApp
     }
   }
 }
-
-

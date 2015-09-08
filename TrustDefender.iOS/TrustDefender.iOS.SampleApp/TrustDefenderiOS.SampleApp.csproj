@@ -84,4 +84,10 @@
   <ItemGroup>
     <Folder Include="Controllers\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TrustDefenderSDK.iOS\TrustDefenderSDK.iOS.csproj">
+      <Project>{5465E284-5411-4DB4-BB5B-C838AE387DFA}</Project>
+      <Name>TrustDefenderSDK.iOS</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
