@@ -20,7 +20,6 @@ namespace Gigya.iOS.SampleApp
         },
         new Section("Requests")
         {
-          new StringElement("Request permissions", RequestPermissions),
           new StringElement("Set status", SetStatus),
           new StringElement("Get user info", GetUserInfo)
         }
@@ -58,41 +57,12 @@ namespace Gigya.iOS.SampleApp
         });
     }
 
-    void RequestPermissions()
-    {
-      // [Facebook SDK] Here you can check that token has all needed permissions
-      var t = Facebook.CoreKit.AccessToken.CurrentAccessToken;
-
-      GigyaSDK.iOS.Gigya.RequestNewFacebookPublishPermissions("publish_actions,publish_pages,manage_pages", (arg0, arg1, arg2) =>
-        {
-          if (arg0)
-          {
-            
-          }
-          else
-          {
-            
-          }
-        });
-      GigyaSDK.iOS.Gigya.RequestNewFacebookReadPermissions("email,user_status,contact_email,user_likes,user_location,user_friends,user_birthday,public_profile", (arg0, arg1, arg2) =>
-        {
-          if (arg0)
-          {
-
-          }
-          else
-          {
-
-          }
-        });      
-    }
-
     void SetStatus()
     {
       Console.WriteLine(new GSSession().Token);
 
       var request = GSRequest.RequestForMethod("socialize.setStatus");
-      request.Parameters.SetValueForKey(new NSString("I feel great"), new NSString("status"));
+      request.Parameters.SetValueForKey(new NSString("Posted via Gigya test app"), new NSString("status"));
       request.SendWithResponseHandler((responce, error) =>
         {
           if (error == null)
