@@ -11,6 +11,20 @@ namespace TrustDefender.iOS.Tests
     TrustDefenderMobile instance = new TrustDefenderMobile();
 
     [Test]
+    public void ConstructorWithParams()
+    {
+      try
+      {
+        var s = new TrustDefenderMobile(new NSDictionary("org_id", "pdj3oyez"));
+      }
+      catch (Exception e)
+      {
+        Assert.Fail(e.Message);
+      }
+      Assert.Pass();
+    }
+
+    [Test]
     public void Contructor()
     {
       try
@@ -44,7 +58,10 @@ namespace TrustDefender.iOS.Tests
     {
       try
       {
-        var s = instance.DoProfileRequestWithCallback((obj) => { Console.WriteLine("Callback"); });
+        var s = instance.DoProfileRequestWithCallback((obj) =>
+          {
+            Console.WriteLine("Callback");
+          });
       }
       catch (Exception e)
       {
@@ -58,7 +75,10 @@ namespace TrustDefender.iOS.Tests
     {
       try
       {
-        var s = instance.DoProfileRequestWithOptions(new NSDictionary(), (obj) => { Console.WriteLine("Callback"); });
+        var s = instance.DoProfileRequestWithOptions(new NSDictionary(), (obj) =>
+          {
+            Console.WriteLine("Callback");
+          });
       }
       catch (Exception e)
       {
