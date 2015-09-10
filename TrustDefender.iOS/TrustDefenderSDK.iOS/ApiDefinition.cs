@@ -3,71 +3,67 @@ using Foundation;
 
 namespace TrustDefenderSDK.iOS
 {
-  //[Verify(ConstantsInterfaceAssociation)]
-  partial interface Constants
+  [Static]
+  public partial interface Constants
   {
     // extern NSString *const TDMOrgID;
-    [Field("TDMOrgID")]
+    [Field("TDMOrgID", "__Internal")]
     NSString TDMOrgID { get; }
 
     // extern NSString *const TDMApiKey;
-    [Field("TDMApiKey")]
+    [Field("TDMApiKey", "__Internal")]
     NSString TDMApiKey { get; }
 
-    [Wrap("WeakTDMDelegate"), Field("TDMDelegate")]
+    // extern NSString *const TDMDelegate;
+    [Field("TDMDelegate", "__Internal")]
     NSString TDMDelegate { get; }
 
-    // extern NSString *const TDMDelegate;
-    [Field("TDMDelegate")]
-    [NullAllowed]
-    NSObject WeakTDMDelegate { get; }
-
     // extern NSString *const TDMTimeout;
-    [Field("TDMTimeout")]
+    [Field("TDMTimeout", "__Internal")]
     NSString TDMTimeout { get; }
-
+    
     // extern NSString *const TDMLocationServices;
-    [Field("TDMLocationServices")]
+    [Field("TDMLocationServices", "__Internal")]
     NSString TDMLocationServices { get; }
-
+    
     // extern NSString *const TDMLocationServicesWithPrompt;
-    [Field("TDMLocationServicesWithPrompt")]
+    [Field("TDMLocationServicesWithPrompt", "__Internal")]
     NSString TDMLocationServicesWithPrompt { get; }
-
+    
     // extern NSString *const TDMDesiredLocationAccuracy;
-    [Field("TDMDesiredLocationAccuracy")]
+    [Field("TDMDesiredLocationAccuracy", "__Internal")]
     NSString TDMDesiredLocationAccuracy { get; }
-
+    
     // extern NSString *const TDMKeychainAccessGroup;
-    [Field("TDMKeychainAccessGroup")]
+    [Field("TDMKeychainAccessGroup", "__Internal")]
     NSString TDMKeychainAccessGroup { get; }
-
+    
     // extern NSString *const TDMOptions;
-    [Field("TDMOptions")]
+    [Field("TDMOptions", "__Internal")]
     NSString TDMOptions { get; }
-
+    
     // extern NSString *const TDMFingerprintServer;
-    [Field("TDMFingerprintServer")]
+    [Field("TDMFingerprintServer", "__Internal")]
     NSString TDMFingerprintServer { get; }
-
+    
     // extern NSString *const TDMProfileSourceURL;
-    [Field("TDMProfileSourceURL")]
+    [Field("TDMProfileSourceURL", "__Internal")]
     NSString TDMProfileSourceURL { get; }
-
+    
     // extern NSString *const TDMSessionID;
-    [Field("TDMSessionID")]
+    [Field("TDMSessionID", "__Internal")]
     NSString TDMSessionID { get; }
-
+    
     // extern NSString *const TDMCustomAttributes;
-    [Field("TDMCustomAttributes")]
+    [Field("TDMCustomAttributes", "__Internal")]
     NSString TDMCustomAttributes { get; }
-
+    
     // extern NSString *const TDMLocation;
-    [Field("TDMLocation")]
+    [Field("TDMLocation", "__Internal")]
     NSString TDMLocation { get; }
-
+    
     // extern NSString *const TDMProfileStatus;
-    [Field("TDMProfileStatus")]
+    [Field("TDMProfileStatus", "__Internal")]
     NSString TDMProfileStatus { get; }
   }
 
