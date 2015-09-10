@@ -7,12 +7,12 @@ namespace TrustDefender.iOS.SampleApp
 {
   public class MainViewController : DialogViewController, ITrustDefenderMobileDelegate
   {
-    TrustDefenderMobile trustDefender;
+    readonly TrustDefenderMobile trustDefender;
 
     public MainViewController()
       : base(UITableViewStyle.Plain, null)
     {
-      var initDictionary = new NSDictionary("org_id", "pdj3oyez", "delegate", this, "location_services", true, "timeout", 10000);
+      var initDictionary = new NSDictionary(Constants.TDMOrgID, "pdj3oyez", Constants.TDMDelegate, this, "location_services", true, Constants.TDMTimeout, 10000, Constants.TDMApiKey, "api_key");
 
       trustDefender = new TrustDefenderMobile(initDictionary);
 
@@ -27,7 +27,7 @@ namespace TrustDefender.iOS.SampleApp
             }),
           new StringElement("Do Profile Request (options)", () =>
             {
-              var responce = trustDefender.DoProfileRequest(new NSDictionary("session_id", "id"));
+              var responce = trustDefender.DoProfileRequest(new NSDictionary(Constants.TDMSessionID, "id"));
               ShowAlert(responce.ToString());
             }),
           new StringElement("Do Profile Request with Callback", () =>
@@ -37,7 +37,7 @@ namespace TrustDefender.iOS.SampleApp
             }),
           new StringElement("Do Profile Request with Options", () =>
             {
-              var responce = trustDefender.DoProfileRequestWithOptions(new NSDictionary("session_id", "id"), Callback);
+              var responce = trustDefender.DoProfileRequestWithOptions(new NSDictionary(Constants.TDMSessionID, "id"), Callback);
               ShowAlert(responce.ToString());
             }),
         },
@@ -59,7 +59,7 @@ namespace TrustDefender.iOS.SampleApp
         {
           new StringElement("Pause true", () => trustDefender.PauseLocationServices(true)),
           new StringElement("Pause false", () => trustDefender.PauseLocationServices(true)),
-          new StringElement("Cancel", trustDefender.Cancel),       
+          new StringElement("Cancel", trustDefender.Cancel)
         }
       };
     }
