@@ -4,11 +4,9 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{BB05ADE0-73F1-4649-A370-7C2EDA9BE49D}</ProjectGuid>
+    <ProjectGuid>{53890721-BB70-40F6-BF11-B5246C70B55A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>KissMetrics.iOS.TutorialApp</RootNamespace>
+    <RootNamespace>Optimizely.iOS.Xamarin.TutorialApp.Test</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
@@ -23,11 +21,11 @@
     <MtouchArch>i386</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
+    <AssemblyName>OptimizelyiOS.TutorialAppTest</AssemblyName>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchUseRefCounting>true</MtouchUseRefCounting>
     <MtouchI18n>
     </MtouchI18n>
-    <AssemblyName>KissMetricsiOS.TutorialApp</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>full</DebugType>
@@ -39,7 +37,7 @@
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <AssemblyName>KissMetrics.iOS.TutorialApp</AssemblyName>
+    <AssemblyName>Optimizely.iOS.Xamarin.TutorialApp.Test</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
@@ -50,7 +48,7 @@
     <MtouchArch>i386</MtouchArch>
     <ConsolePause>false</ConsolePause>
     <MtouchLink>None</MtouchLink>
-    <AssemblyName>KissMetricsiOS.TutorialApp</AssemblyName>
+    <AssemblyName>OptimizelyiOS.TutorialAppTest</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -65,25 +63,19 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
+    <AssemblyName>Optimizely.iOS.Xamarin.TutorialApp.Test</AssemblyName>
     <IpaPackageName>
     </IpaPackageName>
-    <AssemblyName>KissMetrics.iOS.TutorialApp</AssemblyName>
-    <MtouchUseRefCounting>true</MtouchUseRefCounting>
-    <MtouchI18n>
-    </MtouchI18n>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
-    <Reference Include="MonoTouch.Dialog-1" />
+    <Reference Include="MonoTouch.NUnitLite" />
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -91,17 +83,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
-    <Compile Include="AppDelegate.cs" />
-    <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="UnitTestAppDelegate.cs" />
+    <Compile Include="OptimizelyVariableKeyTests.cs" />
+    <Compile Include="OptimizelyTests.cs" />
+    <Compile Include="OptimizelyCodeBlocksKeyTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\KissMetrics.iOS.Binding\KissMetrics.iOS.Binding.csproj">
-      <Project>{A8EE1A70-455E-402A-9AC6-1E1345B402CC}</Project>
-      <Name>KissMetrics.iOS.Binding</Name>
+    <ProjectReference Include="..\Optimizely.iOS.Binding\Optimizely.iOS.Binding.csproj">
+      <Project>{D64BCAD7-15DB-439B-B63D-C901E3C01FE6}</Project>
+      <Name>Optimizely.iOS.Binding</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

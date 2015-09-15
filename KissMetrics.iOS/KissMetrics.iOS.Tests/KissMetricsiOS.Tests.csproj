@@ -4,8 +4,6 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{241B8F05-74A5-4E04-BDB1-7C6A345700D0}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>KissMetrics.iOS.Tests</RootNamespace>
@@ -93,9 +91,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\KissMetrics.iOS.Binding\KissMetrics.iOS.Binding.csproj">
+    <ProjectReference Include="..\KissMetrics.iOS.Binding\KissMetrics.iOS.csproj">
       <Project>{A8EE1A70-455E-402A-9AC6-1E1345B402CC}</Project>
-      <Name>KissMetrics.iOS.Binding</Name>
+      <Name>KissMetrics.iOS</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

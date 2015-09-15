@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KissMetrics.Android", "KissMetrics.Android.csproj", "{ADB03455-5CED-49A5-BFEC-9A3EB86831B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KissMetrics.Android.Binding", "KissMetrics.Android.Binding\KissMetrics.Android.Binding.csproj", "{ADB03455-5CED-49A5-BFEC-9A3EB86831B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

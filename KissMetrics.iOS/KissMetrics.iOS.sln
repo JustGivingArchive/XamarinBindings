@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KissMetrics.iOS.TutorialApp", "KissMetrics.iOS.TutorialApp\KissMetrics.iOS.TutorialApp.csproj", "{BB05ADE0-73F1-4649-A370-7C2EDA9BE49D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KissMetricsiOS.TutorialApp", "KissMetrics.iOS.TutorialApp\KissMetricsiOS.TutorialApp.csproj", "{BB05ADE0-73F1-4649-A370-7C2EDA9BE49D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KissMetrics.iOS.Tests", "KissMetrics.iOS.Tests\KissMetrics.iOS.Tests.csproj", "{241B8F05-74A5-4E04-BDB1-7C6A345700D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KissMetricsiOS.Tests", "KissMetrics.iOS.Tests\KissMetricsiOS.Tests.csproj", "{241B8F05-74A5-4E04-BDB1-7C6A345700D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KissMetrics.iOS.Binding", "KissMetrics.iOS.Binding\KissMetrics.iOS.Binding.csproj", "{A8EE1A70-455E-402A-9AC6-1E1345B402CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KissMetrics.iOS", "KissMetrics.iOS.Binding\KissMetrics.iOS.csproj", "{A8EE1A70-455E-402A-9AC6-1E1345B402CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
