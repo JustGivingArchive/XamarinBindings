@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrustDefenderSDKiOS.Tests", "TrustDefender.iOS.Tests\TrustDefenderSDKiOS.Tests.csproj", "{7C0B4CA1-644C-426E-ACC6-4A064A45A43E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrustDefender.iOS.Tests", "TrustDefender.iOS.Tests\TrustDefender.iOS.Tests.csproj", "{7C0B4CA1-644C-426E-ACC6-4A064A45A43E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrustDefenderSDK.iOS", "TrustDefenderSDK.iOS\TrustDefenderSDK.iOS.csproj", "{5465E284-5411-4DB4-BB5B-C838AE387DFA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrustDefender.iOS.Binding", "TrustDefender.iOS.Binding\TrustDefender.iOS.Binding.csproj", "{5465E284-5411-4DB4-BB5B-C838AE387DFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrustDefenderiOS.SampleApp", "TrustDefender.iOS.SampleApp\TrustDefenderiOS.SampleApp.csproj", "{44A37FC2-549E-44C2-98D7-9F006133E263}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrustDefender.iOS.SampleApp", "TrustDefender.iOS.SampleApp\TrustDefender.iOS.SampleApp.csproj", "{44A37FC2-549E-44C2-98D7-9F006133E263}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optimizely.iOS", "Optimizely.iOS.Binding\Optimizely.iOS.Binding.csproj", "{D64BCAD7-15DB-439B-B63D-C901E3C01FE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optimizely.iOS.TutorialApp.Test", "Optimizely.iOS.TutorialApp.Test\Optimizely.iOS.TutorialApp.Test.csproj", "{53890721-BB70-40F6-BF11-B5246C70B55A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optimizely.iOS.TutorialApp.Tests", "Optimizely.iOS.TutorialApp.Tests\Optimizely.iOS.TutorialApp.Tests.csproj", "{53890721-BB70-40F6-BF11-B5246C70B55A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optimizely.iOS.TutorialApp", "Optimizely.iOS.TutorialApp\Optimizely.iOS.TutorialApp.csproj", "{23546240-9999-4931-95C1-7FC8982D39D5}"
 EndProject
