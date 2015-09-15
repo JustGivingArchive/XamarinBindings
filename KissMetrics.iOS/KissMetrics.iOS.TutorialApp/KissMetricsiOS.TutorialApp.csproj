@@ -97,9 +97,9 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\KissMetrics.iOS.Binding\KissMetrics.iOS.Binding.csproj">
+    <ProjectReference Include="..\KissMetrics.iOS.Binding\KissMetrics.iOS.csproj">
       <Project>{A8EE1A70-455E-402A-9AC6-1E1345B402CC}</Project>
-      <Name>KissMetrics.iOS.Binding</Name>
+      <Name>KissMetrics.iOS</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
