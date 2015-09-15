@@ -4,8 +4,6 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{53890721-BB70-40F6-BF11-B5246C70B55A}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Optimizely.iOS.Xamarin.TutorialApp.Test</RootNamespace>
@@ -92,9 +90,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\Optimizely.iOS.csproj">
+    <ProjectReference Include="..\Optimizely.iOS.Binding\Optimizely.iOS.Binding.csproj">
       <Project>{D64BCAD7-15DB-439B-B63D-C901E3C01FE6}</Project>
-      <Name>Optimizely.iOS</Name>
+      <Name>Optimizely.iOS.Binding</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
