@@ -5,9 +5,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GigyaSDK.Android", "GigyaSD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GigyaSDK.iOS", "GigyaSDK.iOS\GigyaSDK.iOS.csproj", "{1A5A55FD-927C-4EE3-8A2B-48736572A47B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GigyaSDKiOS.Tests", "GigyaSDK.iOS.Tests\GigyaSDKiOS.Tests.csproj", "{083356AD-B179-4841-897D-9BE70DC4BA5D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GigyaSDK.iOS.Tests", "GigyaSDK.iOS.Tests\GigyaSDK.iOS.Tests.csproj", "{083356AD-B179-4841-897D-9BE70DC4BA5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GigyaiOS.SampleApp", "Gigya.iOS.SampleApp\GigyaiOS.SampleApp.csproj", "{06AADB0E-DC40-4ACF-8A04-2D26320BA4C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GigyaSDK.iOS.SampleApp", "GigyaSDK.iOS.SampleApp\GigyaSDK.iOS.SampleApp.csproj", "{06AADB0E-DC40-4ACF-8A04-2D26320BA4C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
