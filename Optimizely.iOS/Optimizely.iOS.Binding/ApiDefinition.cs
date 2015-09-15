@@ -381,18 +381,19 @@ namespace OptimizelyiOS
     }
 
     //[Verify (ConstantsInterfaceAssociation)] //TODO Verify/Refactor
+    [Static]
     interface Constants
     {
         // extern NSString *const OptimizelyExperimentVisitedNotification;
-        [Field ("OptimizelyExperimentVisitedNotification")]
+        [Field ("OptimizelyExperimentVisitedNotification", "__Internal")]
         NSString OptimizelyExperimentVisitedNotification { get; }
 
         // extern NSString *const OptimizelyNewDataFileLoadedNotification;
-        [Field ("OptimizelyNewDataFileLoadedNotification")]
+        [Field ("OptimizelyNewDataFileLoadedNotification", "__Internal")]
         NSString OptimizelyNewDataFileLoadedNotification { get; }
 
         // extern NSString *const OptimizelyGoalTriggeredNotification;
-        [Field ("OptimizelyGoalTriggeredNotification")]
+        [Field ("OptimizelyGoalTriggeredNotification", "__Internal")]
         NSString OptimizelyGoalTriggeredNotification { get; }
     }
 }
