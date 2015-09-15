@@ -102,6 +102,10 @@
     <Compile Include="Controllers\VisualEditorViewController.cs" />
     <Compile Include="Controllers\LiveVariablesViewController.cs" />
     <Compile Include="Controllers\CodeBlocksViewController.cs" />
+    <Compile Include="Views\CustomElements\CustomButton.cs" />
+    <Compile Include="Views\CustomElements\CustomTextField.cs" />
+    <Compile Include="Views\LiveVariableView.cs" />
+    <Compile Include="Controllers\CodeBlocksOnboardViewController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -181,5 +185,7 @@
     <BundleResource Include="Resources\Fonts\Gotham-Light.otf" />
     <BundleResource Include="Resources\Fonts\Gotham-Medium.otf" />
     <BundleResource Include="Resources\Fonts\Gotham-MediumItalic.otf" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
   </ItemGroup>
 </Project>

@@ -19,7 +19,6 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
       TableView.SeparatorColor = UIColor.Clear;
       LoadData();
 
-      //View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromBundle("Images/backgroundImage"));
       TableView.BackgroundView = new UIView(View.Bounds);
       TableView.BackgroundView.BackgroundColor = UIColor.FromPatternImage(UIImage.FromBundle("Images/backgroundImage"));
     }
@@ -73,7 +72,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
     {
       base.ViewWillAppear(animated);
       NavigationController.NavigationBarHidden = false;
-      NavigationController.NavigationBar.BarTintColor = Styling.Colors.BackgroundColor;
+      NavigationController.NavigationBar.BarTintColor = Styling.Colors.WelcomeBackgroundColor;
       NavigationItem.HidesBackButton = true;
 
       var info = new UIButton(UIButtonType.Custom);
@@ -141,8 +140,9 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
         description = new UILabel();
 
         title.TextColor = UIColor.White;
+        title.Font = UIFont.FromName("Gotham-Medium", 20);
         description.TextColor = UIColor.White;
-        description.Font = description.Font.WithSize(12);
+        description.Font = UIFont.FromName("Gotham-Light", 12);
         image.ContentMode = UIViewContentMode.ScaleAspectFit;
 
         BackgroundColor = UIColor.Clear;

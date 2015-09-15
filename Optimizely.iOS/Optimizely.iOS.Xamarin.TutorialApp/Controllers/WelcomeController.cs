@@ -1,6 +1,7 @@
 ﻿using UIKit;
 using Cirrious.FluentLayouts.Touch;
 using Optimizely.iOS.Xamarin.TutorialApp.Lib;
+using Optimizely.iOS.Xamarin.TutorialApp.Views.CustomElements;
 
 namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
 {
@@ -8,7 +9,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
   {
     public WelcomeController()
     {
-      View.BackgroundColor = Styling.Colors.BackgroundColor;
+      View.BackgroundColor = Styling.Colors.WelcomeBackgroundColor;
 
       var welcomeView = new UIView
       {
@@ -29,6 +30,7 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
         Lines = 2,
         TextAlignment = UITextAlignment.Center,
       };
+      welcomeLabel.Font = UIFont.FromName("Gotham-Light", 18);
 
       var textLabel = new UILabel
       {
@@ -36,17 +38,17 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
         Lines = 2,
         TextAlignment = UITextAlignment.Center,
       };
-      textLabel.Font = textLabel.Font.WithSize(14);
+      textLabel.Font = UIFont.FromName("Gotham-Light", 14);
 
-      var button = new UIButton
+      var button = new CustomButton
       {
-        BackgroundColor = Styling.Colors.ButtonColor,
-        ClipsToBounds = true,        
+        BackgroundColor = Styling.Colors.ButtonGreen,
+        TitleText = "Got it. Let's go!"       
       };
-      button.SetTitle("Got it. Let's go!", UIControlState.Normal);
-      button.SetTitleColor(UIColor.White, UIControlState.Normal);
-      button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
-      button.Layer.CornerRadius = 5;
+      // [OPTIMIZELY] Below is an example of if you want to tag
+      // ids manually
+      // OptimizelyiOS.UIView_Optimizely.GetOptimizelyId(button);
+
       button.TouchUpInside += Button_TouchUpInside;
       
       welcomeView.AddSubview(image);
@@ -81,16 +83,15 @@ namespace Optimizely.iOS.Xamarin.TutorialApp.Controllers
 
       View.AddConstraints(
         welcomeView.WithSameCenterX(View),
-        welcomeView.WithSameCenterY(View),
+        welcomeView.WithSameCenterY(View).Minus(10),
         welcomeView.WithSameLeft(View).Plus(30),
         welcomeView.WithSameRight(View).Minus(30),
         welcomeView.Width().EqualTo(View.Bounds.Width - 60),
-        welcomeView.WithSameTop(View).Plus(60),
-        welcomeView.WithSameBottom(View).Minus(100)
+        welcomeView.Height().EqualTo(380)
       );
     }
 
-    void Button_TouchUpInside (object sender, System.EventArgs e)
+    void Button_TouchUpInside(object sender, System.EventArgs e)
     {
       var vc = new LandingTableViewController();
       NavigationController.PushViewController(vc, true);

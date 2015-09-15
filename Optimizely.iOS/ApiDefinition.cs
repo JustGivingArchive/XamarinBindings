@@ -27,7 +27,7 @@ namespace OptimizelyiOS
     [Static]
     [Export("optimizelyCodeBlocksKey:blockNames:")]
     //[Verify(StronglyTypedNSArray)]
-    OptimizelyCodeBlocksKey OptimizelyCodeBlocksKeyS(string key, NSObject[] blockNames);
+    OptimizelyCodeBlocksKey GetOptimizelyCodeBlocksKey(string key, NSObject[] blockNames);
   }
 
   // @interface OptimizelyExperimentData : NSObject
@@ -362,10 +362,22 @@ namespace OptimizelyiOS
     // -(void)codeTest:(NSString *)codeTestKey withBlocks:(NSDictionary *)blocks defaultBlock:(void (^)(void))defaultBlock __attribute__((deprecated("Use [Optimizely codeTestWithKey: blockOne:...]")));
     [Export("codeTest:withBlocks:defaultBlock:")]
     void CodeTest(string codeTestKey, NSDictionary blocks, Action defaultBlock);
+
+    // extern NSString *const OptimizelyExperimentVisitedNotification;
+    [Field("OptimizelyExperimentVisitedNotification", "__Internal")]
+    NSString OptimizelyExperimentVisitedNotification { get; }
+
+    // extern NSString *const OptimizelyNewDataFileLoadedNotification;
+    [Field("OptimizelyNewDataFileLoadedNotification", "__Internal")]
+    NSString OptimizelyNewDataFileLoadedNotification { get; }
+
+    // extern NSString *const OptimizelyGoalTriggeredNotification;
+    [Field("OptimizelyGoalTriggeredNotification", "__Internal")]
+    NSString OptimizelyGoalTriggeredNotification { get; }
   }
 
   //[Verify (ConstantsInterfaceAssociation)] //TODO Verify/Refactor
-  partial interface Constants
+  interface Constants
   {
     // extern NSString *const OptimizelyExperimentVisitedNotification;
     [Field("OptimizelyExperimentVisitedNotification")]
