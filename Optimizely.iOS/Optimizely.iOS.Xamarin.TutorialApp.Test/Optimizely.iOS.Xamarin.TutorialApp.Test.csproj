@@ -6,10 +6,11 @@
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{241B8F05-74A5-4E04-BDB1-7C6A345700D0}</ProjectGuid>
+    <ProjectGuid>{53890721-BB70-40F6-BF11-B5246C70B55A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>KissMetrics.iOS.Tests</RootNamespace>
+    <RootNamespace>Optimizely.iOS.Xamarin.TutorialApp.Test</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Optimizely.iOS.Xamarin.TutorialApp.Test</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,12 +22,8 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchUseRefCounting>true</MtouchUseRefCounting>
-    <MtouchI18n>
-    </MtouchI18n>
-    <AssemblyName>KissMetricsiOS.Tests</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>full</DebugType>
@@ -38,7 +35,6 @@
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <AssemblyName>KissMetrics.iOS.Tests</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
@@ -49,7 +45,6 @@
     <MtouchArch>i386</MtouchArch>
     <ConsolePause>false</ConsolePause>
     <MtouchLink>None</MtouchLink>
-    <AssemblyName>KissMetricsiOS.Tests</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -64,13 +59,6 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
-    <IpaPackageName>
-    </IpaPackageName>
-    <MtouchUseRefCounting>true</MtouchUseRefCounting>
-    <MtouchLink>Full</MtouchLink>
-    <MtouchI18n>
-    </MtouchI18n>
-    <AssemblyName>KissMetrics.iOS.Tests</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -89,13 +77,15 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="UnitTestAppDelegate.cs" />
-    <Compile Include="KissMetricsSDKTests.cs" />
+    <Compile Include="OptimizelyVariableKeyTests.cs" />
+    <Compile Include="OptimizelyTests.cs" />
+    <Compile Include="OptimizelyCodeBlocksKeyTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\KissMetrics.iOS.Binding\KissMetrics.iOS.csproj">
-      <Project>{A8EE1A70-455E-402A-9AC6-1E1345B402CC}</Project>
-      <Name>KissMetrics.iOS</Name>
+    <ProjectReference Include="..\Optimizely.iOS.csproj">
+      <Project>{D64BCAD7-15DB-439B-B63D-C901E3C01FE6}</Project>
+      <Name>Optimizely.iOS</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
