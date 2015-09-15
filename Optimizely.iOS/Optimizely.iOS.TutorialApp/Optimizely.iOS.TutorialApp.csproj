@@ -4,13 +4,10 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{23546240-9999-4931-95C1-7FC8982D39D5}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Optimizely.iOS.Xamarin.TutorialApp</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>Optimizely.iOS.Xamarin.TutorialApp</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -28,6 +25,7 @@
     <MtouchI18n>
     </MtouchI18n>
     <MtouchLink>Full</MtouchLink>
+    <AssemblyName>OptimizelyiOS.TutorialApp</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>full</DebugType>
@@ -39,6 +37,7 @@
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
+    <AssemblyName>Optimizely.iOS.Xamarin.TutorialApp</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
@@ -49,6 +48,7 @@
     <MtouchArch>i386</MtouchArch>
     <ConsolePause>false</ConsolePause>
     <MtouchLink>None</MtouchLink>
+    <AssemblyName>OptimizelyiOS.TutorialApp</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -69,6 +69,7 @@
     <MtouchLink>Full</MtouchLink>
     <MtouchI18n>
     </MtouchI18n>
+    <AssemblyName>Optimizely.iOS.Xamarin.TutorialApp</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -108,12 +109,6 @@
     <Compile Include="Controllers\CodeBlocksOnboardViewController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\Optimizely.iOS.csproj">
-      <Project>{D64BCAD7-15DB-439B-B63D-C901E3C01FE6}</Project>
-      <Name>Optimizely.iOS</Name>
-    </ProjectReference>
-  </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Views\" />
@@ -187,5 +182,11 @@
     <BundleResource Include="Resources\Fonts\Gotham-MediumItalic.otf" />
     <BundleResource Include="Resources\Default.png" />
     <BundleResource Include="Resources\Default%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Optimizely.iOS.Binding\Optimizely.iOS.Binding.csproj">
+      <Project>{D64BCAD7-15DB-439B-B63D-C901E3C01FE6}</Project>
+      <Name>Optimizely.iOS.Binding</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

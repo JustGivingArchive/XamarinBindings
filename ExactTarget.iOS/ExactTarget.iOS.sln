@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExactTarget.iOS", "ExactTarget.iOS.csproj", "{AE98DF86-424C-4372-81FF-5F21DEDCD2A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExactTarget.iOS.Binding", "ExactTarget.iOS.Binding\ExactTarget.iOS.Binding.csproj", "{AE98DF86-424C-4372-81FF-5F21DEDCD2A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
