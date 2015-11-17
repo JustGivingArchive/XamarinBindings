@@ -1,15 +1,9 @@
-# JustGiving's Xamarin Bindings
+# JustGiving and ScoreBigs's Xamarin Bindings
 
-We have created 4 Xamarin.iOS Bindings for use in JustGiving's newly launched iPhone app, and are making them available for others to use:
+This repository is a fork of JustGiving's public Xamarin Bindings project. In addition to the bindings originally found there, ScoreBig has updated the repository with bug fixes, test suites, and sample apps for Optimizely and Kissmetrics. Furthermore, we've added 2 new projects:
 
-- KissMetrics (reasonably well tested)
-- Zendesk (reasonably well tested)
-- Adjust (reasonably well tested)
-- Optimizely (in testing)
-- ExactTarget (in testing)
-
-We've also created Xamarin.Android bindings:
-- KissMetrics (partially tested)
+- ThreatMetrix TrustDefender Mobile iOS (in testing)
+- Gigya iOS (in testing) - forked from: https://github.com/AudioAddict/gigya-sdk-xamarin
 
 While these have worked well for our app, they are provided "as-is" and pull requests for any bugs are gratefully received.
 

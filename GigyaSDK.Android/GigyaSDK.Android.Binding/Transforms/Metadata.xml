@@ -1,0 +1,103 @@
+﻿<metadata>
+  
+  <remove-node path="/api/package[@name='android.net.http']" />
+  <remove-node path="/api/package[@name='android.webkit']" />
+
+  <!-- basic namespace changes -->
+  <attr path="/api/package[@name='com.gigya.json']" name="managedName">GigyaSDK.Android.Json</attr>
+  <attr path="/api/package[@name='com.gigya.socialize']" name="managedName">GigyaSDK.Android</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android']" name="managedName">GigyaSDK.Android</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.login']" name="managedName">GigyaSDK.Android.Login</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.ui']" name="managedName">GigyaSDK.Android.UI</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']" name="managedName">GigyaSDK.Android.Event</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.utils']" name="managedName">GigyaSDK.Android.Utils</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.login.providers']" name="managedName">GigyaSDK.Android.Login.Providers</attr>
+ 
+  <!-- pile of renames for events to avoid collisions -->
+  <attr path="/api/package[@name='com.gigya.socialize.android']/class[@name='GSAPI']/method[@name='addAccountsListener']" name="argsType">GSAddAccountsEventArgs</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android']/class[@name='GSAPI']/method[@name='addAccountsListener']" name="managedName">GSAddAccounts</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android']/class[@name='GSAPI']/method[@name='addAccountsListener']" name="eventName">OnGSAddAccounts</attr>
+  
+  <attr path="/api/package[@name='com.gigya.socialize.android']/class[@name='GSAPI']/method[@name='addSocializeListener']" name="argsType">GSAddSocializeEventArgs</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android']/class[@name='GSAPI']/method[@name='addSocializeListener']" name="managedName">GSAddSocialize</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android']/class[@name='GSAPI']/method[@name='addSocializeListener']" name="eventName">OnGSAddSocialize</attr>
+  
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSAccountsEventListener']/method[@name='onLogin']" name="argsType">GSAccountsLoginEventArgs</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSAccountsEventListener']/method[@name='onLogin']" name="managedName">GSAccountsLogin</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSAccountsEventListener']/method[@name='onLogin']" name="eventName">OnGSAccountsLogin</attr>
+  
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSAccountsEventListener']/method[@name='onLogout']" name="argsType">GSAccountsLogoutEventArgs</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSAccountsEventListener']/method[@name='onLogout']" name="managedName">GSAccountsLogout</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSAccountsEventListener']/method[@name='onLogout']" name="eventName">OnGSAccountsLogout</attr>
+  
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSConnectUIListener']/method[@name='onConnectionAdded']" name="argsType">GSConnectUIConnectionAddedEventArgs</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSConnectUIListener']/method[@name='onConnectionAdded']" name="managedName">GSConnectUIConnectionAdded</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSConnectUIListener']/method[@name='onConnectionAdded']" name="eventName">OnGSConnectUIConnectionAdded</attr>
+  
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSDialogListener']/method[@name='onDismiss']" name="argsType">GSDialogUIDismissEventArgs</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSDialogListener']/method[@name='onDismiss']" name="managedName">GSDialogDismissed</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSDialogListener']/method[@name='onDismiss']" name="eventName">OnGSDialogDismissedAdded</attr>
+  
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSEventListener']/method[@name='onConnectionAdded']" name="argsType">GSEventConnectionAddedEventArgs</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSEventListener']/method[@name='onConnectionAdded']" name="managedName">GSEventConnectionAdded</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSEventListener']/method[@name='onConnectionAdded']" name="eventName">OnGSEventConnectionAdded</attr>
+  
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSEventListener']/method[@name='onConnectionRemoved']" name="argsType">GSEventConnectionRemovedEventArgs</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSEventListener']/method[@name='onConnectionRemoved']" name="managedName">GSEventConnectionRemoved</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSEventListener']/method[@name='onConnectionRemoved']" name="eventName">OnGSEventConnectionRemoved</attr>
+  
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSEventListener']/method[@name='onLogin']" name="argsType">GSEventLoginEventArgs</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSEventListener']/method[@name='onLogin']" name="managedName">GSEventLogin</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSEventListener']/method[@name='onLogin']" name="eventName">OnGSEventLogin</attr>
+  
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSEventListener']/method[@name='onLogout']" name="argsType">GSEventLogoutEventArgs</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSEventListener']/method[@name='onLogout']" name="managedName">GSEventLogout</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSEventListener']/method[@name='onLogout']" name="eventName">OnGSEventLogout</attr>
+  
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSLoginUIListener']/method[@name='onLogin']" name="argsType">GSLoginUILoginEventArgs</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSLoginUIListener']/method[@name='onLogin']" name="managedName">GSLoginUILogin</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSLoginUIListener']/method[@name='onLogin']" name="eventName">OnGSLoginUILogin</attr>
+  
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSPluginListener']/method[@name='onLoad']" name="argsType">GSPluginLoadEventArgs</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSPluginListener']/method[@name='onLoad']" name="managedName">GSPluginLoad</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSPluginListener']/method[@name='onLoad']" name="eventName">OnGSPluginLoad</attr>
+  
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSPluginListener']/method[@name='onError']" name="argsType">GSPluginErrorEventArgs</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSPluginListener']/method[@name='onError']" name="managedName">GSPluginError</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSPluginListener']/method[@name='onError']" name="eventName">OnGSPluginError</attr>
+  
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSPluginListener']/method[@name='onEvent']" name="argsType">GSPluginEventEventArgs</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSPluginListener']/method[@name='onEvent']" name="managedName">GSPluginEvent</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSPluginListener']/method[@name='onEvent']" name="eventName">OnGSPluginEvent</attr>
+  
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSSocializeEventListener']/method[@name='onLogin']" name="argsType">GSSocializeLoginEventArgs</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSSocializeEventListener']/method[@name='onLogin']" name="managedName">SocializeLogin</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSSocializeEventListener']/method[@name='onLogin']" name="eventName">OnSocializeLogin</attr>
+  
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSSocializeEventListener']/method[@name='onLogout']" name="argsType">GSSocializeLogoutEventArgs</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSSocializeEventListener']/method[@name='onLogout']" name="managedName">SocializeLogout</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSSocializeEventListener']/method[@name='onLogout']" name="eventName">OnSocializeLogout</attr>
+
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSSocializeEventListener']/method[@name='onConnectionAdded']" name="argsType">GSSocializeConnectionAddedEventArgs</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSSocializeEventListener']/method[@name='onConnectionAdded']" name="managedName">SocializeConnectionAdded</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSSocializeEventListener']/method[@name='onConnectionAdded']" name="eventName">OnSocializeConnectionAdded</attr>
+  
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSSocializeEventListener']/method[@name='onConnectionRemoved']" name="argsType">GSSocializeConnectionRemovedEventArgs</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSSocializeEventListener']/method[@name='onConnectionRemoved']" name="managedName">SocializeConnectionRemoved</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSSocializeEventListener']/method[@name='onConnectionRemoved']" name="eventName">OnSocializeConnectionRemoved</attr>
+  
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSUIListener']/method[@name='onLoad']" name="argsType">GSUILoadEventArgs</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSUIListener']/method[@name='onLoad']" name="managedName">GSUILoad</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSUIListener']/method[@name='onLoad']" name="eventName">OnGSUILoad</attr>
+  
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSUIListener']/method[@name='onClose']" name="argsType">GSUICloseEventArgs</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSUIListener']/method[@name='onClose']" name="managedName">GSUIClose</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSUIListener']/method[@name='onClose']" name="eventName">OnGSUIClose</attr>
+  
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSUIListener']/method[@name='onError']" name="argsType">GSUIErrorEventArgs</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSUIListener']/method[@name='onError']" name="managedName">GSUIError</attr>
+  <attr path="/api/package[@name='com.gigya.socialize.android.event']/interface[@name='GSUIListener']/method[@name='onError']" name="eventName">OnGSUIError</attr>
+
+  <attr path="/api/package[@name='com.gigya.socialize.android.login.providers']/interface[@name='WebLoginActivity.WebLoginActivityCallback']" name="visibility">public</attr>
+
+</metadata>
