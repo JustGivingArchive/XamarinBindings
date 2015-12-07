@@ -22,11 +22,6 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <CustomCommands>
-      <CustomCommands>
-        <Command type="AfterBuild" command="cp ${TargetFile} ${SolutionDir}/lib/" />
-      </CustomCommands>
-    </CustomCommands>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -64,5 +59,48 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZendeskSDK.bundle\btnAttach.png" />
+    <BundleResource Include="Resources\ZendeskSDK.bundle\btnAttach%402x.png" />
+    <BundleResource Include="Resources\ZendeskSDK.bundle\btnAttach%403x.png" />
+    <BundleResource Include="Resources\ZendeskSDK.bundle\help_center_article_style.css" />
+    <BundleResource Include="Resources\ZendeskSDK.bundle\ico_coversations.png" />
+    <BundleResource Include="Resources\ZendeskSDK.bundle\ico_coversations%402x.png" />
+    <BundleResource Include="Resources\ZendeskSDK.bundle\ico_coversations%403x.png" />
+    <BundleResource Include="Resources\ZendeskSDK.bundle\ico_newticket.png" />
+    <BundleResource Include="Resources\ZendeskSDK.bundle\ico_newticket%402x.png" />
+    <BundleResource Include="Resources\ZendeskSDK.bundle\ico_newticket%403x.png" />
+    <BundleResource Include="Resources\ZendeskSDK.bundle\icoAdd.png" />
+    <BundleResource Include="Resources\ZendeskSDK.bundle\icoAdd%402x.png" />
+    <BundleResource Include="Resources\ZendeskSDK.bundle\icoAdd%403x.png" />
+    <BundleResource Include="Resources\ZendeskSDK.bundle\icoAttach.png" />
+    <BundleResource Include="Resources\ZendeskSDK.bundle\icoAttach%402x.png" />
+    <BundleResource Include="Resources\ZendeskSDK.bundle\icoAttach%403x.png" />
+    <BundleResource Include="Resources\ZendeskSDK.bundle\icoClose.png" />
+    <BundleResource Include="Resources\ZendeskSDK.bundle\icoClose%402x.png" />
+    <BundleResource Include="Resources\ZendeskSDK.bundle\icoClose%403x.png" />
+    <BundleResource Include="Resources\ZendeskSDK.bundle\Info.plist" />
+    <BundleResource Include="Resources\ZendeskSDK.bundle\ModelIdentifier.plist" />
+    <BundleResource Include="Resources\ZendeskSDKStrings.bundle\da.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ZendeskSDKStrings.bundle\de.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ZendeskSDKStrings.bundle\en.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ZendeskSDKStrings.bundle\en-GB.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ZendeskSDKStrings.bundle\es.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ZendeskSDKStrings.bundle\fi.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ZendeskSDKStrings.bundle\fr.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ZendeskSDKStrings.bundle\it.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ZendeskSDKStrings.bundle\ja.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ZendeskSDKStrings.bundle\ko.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ZendeskSDKStrings.bundle\nl.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ZendeskSDKStrings.bundle\no.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ZendeskSDKStrings.bundle\pl.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ZendeskSDKStrings.bundle\pt.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ZendeskSDKStrings.bundle\ru.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ZendeskSDKStrings.bundle\sv.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ZendeskSDKStrings.bundle\tr.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ZendeskSDKStrings.bundle\zh-Hans.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ZendeskSDKStrings.bundle\zh-Hant.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ZendeskSDKStrings.bundle\Info.plist" />
   </ItemGroup>
 </Project>
