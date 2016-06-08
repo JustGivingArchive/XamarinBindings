@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{8FFB629D-F513-41CE-95D2-7ECE97B6EEEC};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{5E6FA2B8-D94C-4318-8A37-1E9D765CF71E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Mixpanel</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Mixpanel</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="libMixpanel.linkwith.cs">
+      <DependentUpon>libMixpanel.a</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
+  <ItemGroup>
+    <ObjcBindingNativeLibrary Include="libMixpanel.a" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\MPSurvey.storyboardc\Info.plist" />
+    <BundleResource Include="Resources\MPSurvey.storyboardc\MPSurveyMultipleChoiceQuestionViewController.nib" />
+    <BundleResource Include="Resources\MPSurvey.storyboardc\MPSurveyNavigationController.nib" />
+    <BundleResource Include="Resources\MPSurvey.storyboardc\MPSurveyTextQuestionViewController.nib" />
+    <BundleResource Include="Resources\MPSurvey.storyboardc\RIP-po-dgx-view-cp6-lZ-a9t.nib" />
+    <BundleResource Include="Resources\MPSurvey.storyboardc\tDf-fb-udT-view-LG7-cL-aRp.nib" />
+    <BundleResource Include="Resources\MPSurvey.storyboardc\V5X-Ik-MvF-view-dcL-M9-gG3.nib" />
+    <BundleResource Include="Resources\MPNotification.storyboardc\Info.plist" />
+    <BundleResource Include="Resources\MPNotification.storyboardc\MPNotificationViewController.nib" />
+    <BundleResource Include="Resources\MPNotification.storyboardc\puo-Hy-QiQ-view-Wch-Xc-Avw.nib" />
+    <BundleResource Include="Resources\MPArrowLeft.png" />
+    <BundleResource Include="Resources\MPArrowLeft%402x.png" />
+    <BundleResource Include="Resources\MPArrowRight.png" />
+    <BundleResource Include="Resources\MPArrowRight%402x.png" />
+    <BundleResource Include="Resources\MPCheckmark.png" />
+    <BundleResource Include="Resources\MPCheckmark%402x.png" />
+    <BundleResource Include="Resources\MPCloseBtn.png" />
+    <BundleResource Include="Resources\MPCloseBtn%402x.png" />
+    <BundleResource Include="Resources\MPDismissKeyboard.png" />
+    <BundleResource Include="Resources\MPDismissKeyboard%402x.png" />
+    <BundleResource Include="Resources\snapshot_config.json" />
+    <BundleResource Include="Resources\test_variant.json" />
+  </ItemGroup>
+</Project>
