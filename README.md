@@ -7,6 +7,7 @@ We have created 4 Xamarin.iOS Bindings for use in JustGiving's newly launched iP
 - Adjust (reasonably well tested)
 - Optimizely (in testing)
 - ExactTarget (in testing)
+- Mixpanel (well tested - also see blogpost for how to use [http://tech.justgiving.com/2016/06/08/integrating-mixpanel-analytics-into-your-xamarin-ios-app/](Tweaks))
 
 We've also created Xamarin.Android bindings:
 - KissMetrics (partially tested)
